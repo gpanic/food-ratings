@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://KISFoodLib"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="Proizvajalec">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="id" type="xsd:int"></xsd:element>
+			<xsd:element minOccurs="0" name="naziv" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="drzava"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="mesto" type="xsd:string"></xsd:element>
+
+
+			<xsd:element minOccurs="0" name="ocene"
+				maxOccurs="unbounded">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:int">
+						<xsd:minExclusive value="1"></xsd:minExclusive>
+						<xsd:maxExclusive value="10"></xsd:maxExclusive>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="ManageKategorija" targetNamespace="http://KISFoodLib/ManageKategorija" xmlns:bons1="http://KISFoodLib" xmlns:tns="http://KISFoodLib/ManageKategorija" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <wsdl:types>
+    <xsd:schema targetNamespace="http://KISFoodLib/ManageKategorija">
+      <xsd:import namespace="http://KISFoodLib" schemaLocation="Kategorije.xsd"/>
+      <xsd:import namespace="http://KISFoodLib" schemaLocation="Kategorija.xsd"/>
+      <xsd:element name="createKategorija">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="kategorija" nillable="true" type="bons1:Kategorija"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="createKategorijaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="readKategorija">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="id" nillable="true" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="readKategorijaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="kategorija" nillable="true" type="bons1:Kategorija"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateKategorija">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="kategorija" nillable="true" type="bons1:Kategorija"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateKategorijaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteKategorija">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="id" nillable="true" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteKategorijaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listKategorija">
+        <xsd:complexType>
+          <xsd:sequence/>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listKategorijaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="kategorije" nillable="true" type="bons1:Kategorije"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="createKategorijaRequestMsg">
+    <wsdl:part element="tns:createKategorija" name="createKategorijaParameters"/>
+  </wsdl:message>
+    <wsdl:message name="createKategorijaResponseMsg">
+    <wsdl:part element="tns:createKategorijaResponse" name="createKategorijaResult"/>
+  </wsdl:message>
+    <wsdl:message name="readKategorijaRequestMsg">
+    <wsdl:part element="tns:readKategorija" name="readKategorijaParameters"/>
+  </wsdl:message>
+    <wsdl:message name="readKategorijaResponseMsg">
+    <wsdl:part element="tns:readKategorijaResponse" name="readKategorijaResult"/>
+  </wsdl:message>
+    <wsdl:message name="updateKategorijaRequestMsg">
+    <wsdl:part element="tns:updateKategorija" name="updateKategorijaParameters"/>
+  </wsdl:message>
+    <wsdl:message name="updateKategorijaResponseMsg">
+    <wsdl:part element="tns:updateKategorijaResponse" name="updateKategorijaResult"/>
+  </wsdl:message>
+    <wsdl:message name="deleteKategorijaRequestMsg">
+    <wsdl:part element="tns:deleteKategorija" name="deleteKategorijaParameters"/>
+  </wsdl:message>
+    <wsdl:message name="deleteKategorijaResponseMsg">
+    <wsdl:part element="tns:deleteKategorijaResponse" name="deleteKategorijaResult"/>
+  </wsdl:message>
+    <wsdl:message name="listKategorijaRequestMsg">
+    <wsdl:part element="tns:listKategorija" name="listKategorijaParameters"/>
+  </wsdl:message>
+    <wsdl:message name="listKategorijaResponseMsg">
+    <wsdl:part element="tns:listKategorijaResponse" name="listKategorijaResult"/>
+  </wsdl:message>
+    <wsdl:portType name="ManageKategorija">
+    <wsdl:operation name="createKategorija">
+      <wsdl:input message="tns:createKategorijaRequestMsg" name="createKategorijaRequest"/>
+      <wsdl:output message="tns:createKategorijaResponseMsg" name="createKategorijaResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="readKategorija">
+      <wsdl:input message="tns:readKategorijaRequestMsg" name="readKategorijaRequest"/>
+      <wsdl:output message="tns:readKategorijaResponseMsg" name="readKategorijaResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="updateKategorija">
+      <wsdl:input message="tns:updateKategorijaRequestMsg" name="updateKategorijaRequest"/>
+      <wsdl:output message="tns:updateKategorijaResponseMsg" name="updateKategorijaResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="deleteKategorija">
+      <wsdl:input message="tns:deleteKategorijaRequestMsg" name="deleteKategorijaRequest"/>
+      <wsdl:output message="tns:deleteKategorijaResponseMsg" name="deleteKategorijaResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="listKategorija">
+      <wsdl:input message="tns:listKategorijaRequestMsg" name="listKategorijaRequest"/>
+      <wsdl:output message="tns:listKategorijaResponseMsg" name="listKategorijaResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scdl:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://www.ibm.com/xmlns/prod/websphere/scdl/java/6.0.0" xmlns:ns1="http://KISFoodLib/ManageDrzava" xmlns:ns2="http://KISFoodLib/ManageIzdelek" xmlns:ns3="http://KISFoodLib/ManageKategorija" xmlns:ns4="http://KISFoodLib/ManageProizvajalec" xmlns:ns5="http://KISFoodLib/ManageUporabnik" xmlns:scdl="http://www.ibm.com/xmlns/prod/websphere/scdl/6.0.0" xmlns:wsdl="http://www.ibm.com/xmlns/prod/websphere/scdl/wsdl/6.0.0" displayName="DataManager" name="DataManager">
+  <interfaces>
+    <interface xsi:type="wsdl:WSDLPortType" preferredInteractionStyle="sync" portType="ns1:ManageDrzava">
+      <scdl:interfaceQualifier xsi:type="scdl:JoinTransaction" value="true"/>
+    </interface>
+    <interface xsi:type="wsdl:WSDLPortType" preferredInteractionStyle="sync" portType="ns2:ManageIzdelek">
+      <scdl:interfaceQualifier xsi:type="scdl:JoinTransaction" value="true"/>
+    </interface>
+    <interface xsi:type="wsdl:WSDLPortType" preferredInteractionStyle="sync" portType="ns3:ManageKategorija">
+      <scdl:interfaceQualifier xsi:type="scdl:JoinTransaction" value="true"/>
+    </interface>
+    <interface xsi:type="wsdl:WSDLPortType" preferredInteractionStyle="sync" portType="ns4:ManageProizvajalec">
+      <scdl:interfaceQualifier xsi:type="scdl:JoinTransaction" value="true"/>
+    </interface>
+    <interface xsi:type="wsdl:WSDLPortType" preferredInteractionStyle="sync" portType="ns5:ManageUporabnik">
+      <scdl:interfaceQualifier xsi:type="scdl:JoinTransaction" value="true"/>
+    </interface>
+  </interfaces>
+  <references>
+    <reference name="ManageKategorijaPartner">
+      <interface xsi:type="wsdl:WSDLPortType" portType="ns3:ManageKategorija"/>
+      <scdl:referenceQualifier xsi:type="scdl:SuspendTransaction" value="false"/>
+      <scdl:referenceQualifier xsi:type="scdl:Reliability"/>
+      <scdl:referenceQualifier xsi:type="scdl:DeliverAsyncAt" value="commit"/>
+      <wire target="ManageKategorija"/>
+    </reference>
+    <reference name="ManageDrzavaPartner">
+      <interface xsi:type="wsdl:WSDLPortType" portType="ns1:ManageDrzava"/>
+      <scdl:referenceQualifier xsi:type="scdl:SuspendTransaction" value="false"/>
+      <scdl:referenceQualifier xsi:type="scdl:Reliability"/>
+      <scdl:referenceQualifier xsi:type="scdl:DeliverAsyncAt" value="commit"/>
+      <wire target="ManageDrzava"/>
+    </reference>
+    <reference name="ManageIzdelekPartner">
+      <interface xsi:type="wsdl:WSDLPortType" portType="ns2:ManageIzdelek"/>
+      <scdl:referenceQualifier xsi:type="scdl:SuspendTransaction" value="false"/>
+      <scdl:referenceQualifier xsi:type="scdl:Reliability"/>
+      <scdl:referenceQualifier xsi:type="scdl:DeliverAsyncAt" value="commit"/>
+      <wire target="ManageIzdelek"/>
+    </reference>
+    <reference name="ManageUporabnikPartner">
+      <interface xsi:type="wsdl:WSDLPortType" portType="ns5:ManageUporabnik"/>
+      <scdl:referenceQualifier xsi:type="scdl:SuspendTransaction" value="false"/>
+      <scdl:referenceQualifier xsi:type="scdl:Reliability"/>
+      <scdl:referenceQualifier xsi:type="scdl:DeliverAsyncAt" value="commit"/>
+      <wire target="ManageUporabnik"/>
+    </reference>
+    <reference name="ManageProizvajalecPartner">
+      <interface xsi:type="wsdl:WSDLPortType" portType="ns4:ManageProizvajalec"/>
+      <scdl:referenceQualifier xsi:type="scdl:SuspendTransaction" value="false"/>
+      <scdl:referenceQualifier xsi:type="scdl:Reliability"/>
+      <scdl:referenceQualifier xsi:type="scdl:DeliverAsyncAt" value="commit"/>
+      <wire target="ManageProizvajalec"/>
+    </reference>
+  </references>
+  <implementation xsi:type="java:JavaImplementation" class="component.implementation.DataManagerImpl">
+    <scdl:implementationQualifier xsi:type="scdl:Transaction" value="global"/>
+  </implementation>
+</scdl:component>

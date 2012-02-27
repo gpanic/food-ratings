@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proizvajalci xmlns="http://www.example.org/Proizvajalci">
+	<proizvajalec id="0">
+		<naziv>Nestle</naziv>
+		<drzava>Svica</drzava>
+		<mesto>Vavey</mesto>
+		<ocene>
+			<ocena>8</ocena>
+			<ocena>9</ocena>
+		</ocene>
+	</proizvajalec>
+</proizvajalci>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kategorije xmlns="http://www.example.org/Kategorije">
+	<kategorija id="0">
+		<naziv>Sadje</naziv>
+	</kategorija>
+</kategorije>

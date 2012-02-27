@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="ManageUporabnik" targetNamespace="http://KISFoodLib/ManageUporabnik" xmlns:bons1="http://KISFoodLib" xmlns:tns="http://KISFoodLib/ManageUporabnik" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <wsdl:types>
+    <xsd:schema targetNamespace="http://KISFoodLib/ManageUporabnik">
+      <xsd:import namespace="http://KISFoodLib" schemaLocation="Uporabniki.xsd"/>
+      <xsd:import namespace="http://KISFoodLib" schemaLocation="Uporabnik.xsd"/>
+      <xsd:element name="createUporabnik">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="uporabnik" nillable="true" type="bons1:Uporabnik"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="createUporabnikResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateUporabnik">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="uporabnik" nillable="true" type="bons1:Uporabnik"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateUporabnikResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="readUporabnik">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="id" nillable="true" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="readUporabnikResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="uporabnik" nillable="true" type="bons1:Uporabnik"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteUporabnik">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="id" nillable="true" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteUporabnikResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listUporabnik">
+        <xsd:complexType>
+          <xsd:sequence/>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listUporabnikResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="uporabniki" nillable="true" type="bons1:Uporabniki"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="loginUporabnik">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="uporabnik" nillable="true" type="bons1:Uporabnik"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="loginUporabnikResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="existsUporabnik">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="uporabnik" nillable="true" type="bons1:Uporabnik"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="existsUporabnikResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="isAdminUporabnik">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="id" nillable="true" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="isAdminUporabnikResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+        </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="createUporabnikRequestMsg">
+    <wsdl:part element="tns:createUporabnik" name="createUporabnikParameters"/>
+  </wsdl:message>
+    <wsdl:message name="createUporabnikResponseMsg">
+    <wsdl:part element="tns:createUporabnikResponse" name="createUporabnikResult"/>
+  </wsdl:message>
+    <wsdl:message name="updateUporabnikRequestMsg">
+    <wsdl:part element="tns:updateUporabnik" name="updateUporabnikParameters"/>
+  </wsdl:message>
+    <wsdl:message name="updateUporabnikResponseMsg">
+    <wsdl:part element="tns:updateUporabnikResponse" name="updateUporabnikResult"/>
+  </wsdl:message>
+    <wsdl:message name="readUporabnikRequestMsg">
+    <wsdl:part element="tns:readUporabnik" name="readUporabnikParameters"/>
+  </wsdl:message>
+    <wsdl:message name="readUporabnikResponseMsg">
+    <wsdl:part element="tns:readUporabnikResponse" name="readUporabnikResult"/>
+  </wsdl:message>
+    <wsdl:message name="deleteUporabnikRequestMsg">
+    <wsdl:part element="tns:deleteUporabnik" name="deleteUporabnikParameters"/>
+  </wsdl:message>
+    <wsdl:message name="deleteUporabnikResponseMsg">
+    <wsdl:part element="tns:deleteUporabnikResponse" name="deleteUporabnikResult"/>
+  </wsdl:message>
+    <wsdl:message name="listUporabnikRequestMsg">
+    <wsdl:part element="tns:listUporabnik" name="listUporabnikParameters"/>
+  </wsdl:message>
+    <wsdl:message name="listUporabnikResponseMsg">
+    <wsdl:part element="tns:listUporabnikResponse" name="listUporabnikResult"/>
+  </wsdl:message>
+    <wsdl:message name="loginUporabnikRequestMsg">
+    <wsdl:part element="tns:loginUporabnik" name="loginUporabnikParameters"/>
+  </wsdl:message>
+    <wsdl:message name="loginUporabnikResponseMsg">
+    <wsdl:part element="tns:loginUporabnikResponse" name="loginUporabnikResult"/>
+  </wsdl:message>
+    <wsdl:message name="existsUporabnikRequestMsg">
+    <wsdl:part element="tns:existsUporabnik" name="existsUporabnikParameters"/>
+  </wsdl:message>
+    <wsdl:message name="existsUporabnikResponseMsg">
+    <wsdl:part element="tns:existsUporabnikResponse" name="existsUporabnikResult"/>
+  </wsdl:message>
+    <wsdl:message name="isAdminUporabnikRequestMsg">
+    <wsdl:part element="tns:isAdminUporabnik" name="isAdminUporabnikParameters"/>
+  </wsdl:message>
+    <wsdl:message name="isAdminUporabnikResponseMsg">
+    <wsdl:part element="tns:isAdminUporabnikResponse" name="isAdminUporabnikResult"/>
+  </wsdl:message>
+    <wsdl:portType name="ManageUporabnik">
+    <wsdl:operation name="createUporabnik">
+      <wsdl:input message="tns:createUporabnikRequestMsg" name="createUporabnikRequest"/>
+      <wsdl:output message="tns:createUporabnikResponseMsg" name="createUporabnikResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="readUporabnik">
+      <wsdl:input message="tns:readUporabnikRequestMsg" name="readUporabnikRequest"/>
+      <wsdl:output message="tns:readUporabnikResponseMsg" name="readUporabnikResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="updateUporabnik">
+      <wsdl:input message="tns:updateUporabnikRequestMsg" name="updateUporabnikRequest"/>
+      <wsdl:output message="tns:updateUporabnikResponseMsg" name="updateUporabnikResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="deleteUporabnik">
+      <wsdl:input message="tns:deleteUporabnikRequestMsg" name="deleteUporabnikRequest"/>
+      <wsdl:output message="tns:deleteUporabnikResponseMsg" name="deleteUporabnikResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="listUporabnik">
+      <wsdl:input message="tns:listUporabnikRequestMsg" name="listUporabnikRequest"/>
+      <wsdl:output message="tns:listUporabnikResponseMsg" name="listUporabnikResponse"/>
+    </wsdl:operation>
+        <wsdl:operation name="loginUporabnik">
+      <wsdl:input message="tns:loginUporabnikRequestMsg" name="loginUporabnikRequest"/>
+      <wsdl:output message="tns:loginUporabnikResponseMsg" name="loginUporabnikResponse"/>
+    </wsdl:operation>
+        <wsdl:operation name="existsUporabnik">
+      <wsdl:input message="tns:existsUporabnikRequestMsg" name="existsUporabnikRequest"/>
+      <wsdl:output message="tns:existsUporabnikResponseMsg" name="existsUporabnikResponse"/>
+    </wsdl:operation>
+        <wsdl:operation name="isAdminUporabnik">
+      <wsdl:input message="tns:isAdminUporabnikRequestMsg" name="isAdminUporabnikRequest"/>
+      <wsdl:output message="tns:isAdminUporabnikResponseMsg" name="isAdminUporabnikResponse"/>
+    </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

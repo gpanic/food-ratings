@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="ManageIzdelek" targetNamespace="http://KISFoodLib/ManageIzdelek" xmlns:bons1="http://KISFoodLib" xmlns:tns="http://KISFoodLib/ManageIzdelek" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <wsdl:types>
+    <xsd:schema targetNamespace="http://KISFoodLib/ManageIzdelek">
+      <xsd:import namespace="http://KISFoodLib" schemaLocation="Izdelki.xsd"/>
+      <xsd:import namespace="http://KISFoodLib" schemaLocation="Izdelek.xsd"/>
+      <xsd:element name="createIzdelek">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="izdelek" nillable="true" type="bons1:Izdelek"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="createIzdelekResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="readIzdelek">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="id" nillable="true" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="readIzdelekResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="izdelek" nillable="true" type="bons1:Izdelek"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateIzdelek">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="izdelek" nillable="true" type="bons1:Izdelek"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateIzdelekResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteIzdelek">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="id" nillable="true" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteIzdelekResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listIzdelek">
+        <xsd:complexType>
+          <xsd:sequence/>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listIzdelekResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="izdelki" nillable="true" type="bons1:Izdelki"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="createIzdelekRequestMsg">
+    <wsdl:part element="tns:createIzdelek" name="createIzdelekParameters"/>
+  </wsdl:message>
+    <wsdl:message name="createIzdelekResponseMsg">
+    <wsdl:part element="tns:createIzdelekResponse" name="createIzdelekResult"/>
+  </wsdl:message>
+    <wsdl:message name="readIzdelekRequestMsg">
+    <wsdl:part element="tns:readIzdelek" name="readIzdelekParameters"/>
+  </wsdl:message>
+    <wsdl:message name="readIzdelekResponseMsg">
+    <wsdl:part element="tns:readIzdelekResponse" name="readIzdelekResult"/>
+  </wsdl:message>
+    <wsdl:message name="updateIzdelekRequestMsg">
+    <wsdl:part element="tns:updateIzdelek" name="updateIzdelekParameters"/>
+  </wsdl:message>
+    <wsdl:message name="updateIzdelekResponseMsg">
+    <wsdl:part element="tns:updateIzdelekResponse" name="updateIzdelekResult"/>
+  </wsdl:message>
+    <wsdl:message name="deleteIzdelekRequestMsg">
+    <wsdl:part element="tns:deleteIzdelek" name="deleteIzdelekParameters"/>
+  </wsdl:message>
+    <wsdl:message name="deleteIzdelekResponseMsg">
+    <wsdl:part element="tns:deleteIzdelekResponse" name="deleteIzdelekResult"/>
+  </wsdl:message>
+    <wsdl:message name="listIzdelekRequestMsg">
+    <wsdl:part element="tns:listIzdelek" name="listIzdelekParameters"/>
+  </wsdl:message>
+    <wsdl:message name="listIzdelekResponseMsg">
+    <wsdl:part element="tns:listIzdelekResponse" name="listIzdelekResult"/>
+  </wsdl:message>
+    <wsdl:portType name="ManageIzdelek">
+    <wsdl:operation name="createIzdelek">
+      <wsdl:input message="tns:createIzdelekRequestMsg" name="createIzdelekRequest"/>
+      <wsdl:output message="tns:createIzdelekResponseMsg" name="createIzdelekResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="readIzdelek">
+      <wsdl:input message="tns:readIzdelekRequestMsg" name="readIzdelekRequest"/>
+      <wsdl:output message="tns:readIzdelekResponseMsg" name="readIzdelekResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="updateIzdelek">
+      <wsdl:input message="tns:updateIzdelekRequestMsg" name="updateIzdelekRequest"/>
+      <wsdl:output message="tns:updateIzdelekResponseMsg" name="updateIzdelekResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="deleteIzdelek">
+      <wsdl:input message="tns:deleteIzdelekRequestMsg" name="deleteIzdelekRequest"/>
+      <wsdl:output message="tns:deleteIzdelekResponseMsg" name="deleteIzdelekResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="listIzdelek">
+      <wsdl:input message="tns:listIzdelekRequestMsg" name="listIzdelekRequest"/>
+      <wsdl:output message="tns:listIzdelekResponseMsg" name="listIzdelekResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

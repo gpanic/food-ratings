@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://KISFoodLib"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:bons0="http://KISFoodLib">
+	<xsd:include schemaLocation="Uporabnik.xsd"></xsd:include>
+	<xsd:complexType name="Uporabniki">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="uporabniki"
+				type="bons0:Uporabnik" maxOccurs="unbounded">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

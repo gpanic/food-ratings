@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="ManageProizvajalec" targetNamespace="http://KISFoodLib/ManageProizvajalec" xmlns:bons1="http://KISFoodLib" xmlns:tns="http://KISFoodLib/ManageProizvajalec" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <wsdl:types>
+    <xsd:schema targetNamespace="http://KISFoodLib/ManageProizvajalec">
+            <xsd:import namespace="http://KISFoodLib" schemaLocation="Proizvajalci.xsd"/>
+            <xsd:import namespace="http://KISFoodLib" schemaLocation="Proizvajalec.xsd"/>
+      <xsd:element name="createProizvajalec">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="proizvajalec" nillable="true" type="bons1:Proizvajalec"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="createProizvajalecResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="readProizvajalec">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="id" nillable="true" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="readProizvajalecResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="proizvajalec" nillable="true" type="bons1:Proizvajalec"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="updateProizvajalec">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="proizvajalec" nillable="true" type="bons1:Proizvajalec"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="updateProizvajalecResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="deleteProizvajalec">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="id" nillable="true" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="deleteProizvajalecResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="listProizvajalec">
+        <xsd:complexType>
+          <xsd:sequence/>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="listProizvajalecResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="proizvajalci" nillable="true" type="bons1:Proizvajalci"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+        </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="createProizvajalecRequestMsg">
+    <wsdl:part element="tns:createProizvajalec" name="createProizvajalecParameters"/>
+  </wsdl:message>
+    <wsdl:message name="createProizvajalecResponseMsg">
+    <wsdl:part element="tns:createProizvajalecResponse" name="createProizvajalecResult"/>
+  </wsdl:message>
+    <wsdl:message name="readProizvajalecRequestMsg">
+    <wsdl:part element="tns:readProizvajalec" name="readProizvajalecParameters"/>
+  </wsdl:message>
+    <wsdl:message name="readProizvajalecResponseMsg">
+    <wsdl:part element="tns:readProizvajalecResponse" name="readProizvajalecResult"/>
+  </wsdl:message>
+    <wsdl:message name="updateProizvajalecRequestMsg">
+    <wsdl:part element="tns:updateProizvajalec" name="updateProizvajalecParameters"/>
+  </wsdl:message>
+    <wsdl:message name="updateProizvajalecResponseMsg">
+    <wsdl:part element="tns:updateProizvajalecResponse" name="updateProizvajalecResult"/>
+  </wsdl:message>
+    <wsdl:message name="deleteProizvajalecRequestMsg">
+    <wsdl:part element="tns:deleteProizvajalec" name="deleteProizvajalecParameters"/>
+  </wsdl:message>
+    <wsdl:message name="deleteProizvajalecResponseMsg">
+    <wsdl:part element="tns:deleteProizvajalecResponse" name="deleteProizvajalecResult"/>
+  </wsdl:message>
+    <wsdl:message name="listProizvajalecRequestMsg">
+    <wsdl:part element="tns:listProizvajalec" name="listProizvajalecParameters"/>
+  </wsdl:message>
+    <wsdl:message name="listProizvajalecResponseMsg">
+    <wsdl:part element="tns:listProizvajalecResponse" name="listProizvajalecResult"/>
+  </wsdl:message>
+    <wsdl:portType name="ManageProizvajalec">
+    <wsdl:operation name="createProizvajalec">
+      <wsdl:input message="tns:createProizvajalecRequestMsg" name="createProizvajalecRequest"/>
+      <wsdl:output message="tns:createProizvajalecResponseMsg" name="createProizvajalecResponse"/>
+    </wsdl:operation>
+        <wsdl:operation name="readProizvajalec">
+      <wsdl:input message="tns:readProizvajalecRequestMsg" name="readProizvajalecRequest"/>
+      <wsdl:output message="tns:readProizvajalecResponseMsg" name="readProizvajalecResponse"/>
+    </wsdl:operation>
+        <wsdl:operation name="updateProizvajalec">
+      <wsdl:input message="tns:updateProizvajalecRequestMsg" name="updateProizvajalecRequest"/>
+      <wsdl:output message="tns:updateProizvajalecResponseMsg" name="updateProizvajalecResponse"/>
+    </wsdl:operation>
+        <wsdl:operation name="deleteProizvajalec">
+      <wsdl:input message="tns:deleteProizvajalecRequestMsg" name="deleteProizvajalecRequest"/>
+      <wsdl:output message="tns:deleteProizvajalecResponseMsg" name="deleteProizvajalecResponse"/>
+    </wsdl:operation>
+        <wsdl:operation name="listProizvajalec">
+      <wsdl:input message="tns:listProizvajalecRequestMsg" name="listProizvajalecRequest"/>
+      <wsdl:output message="tns:listProizvajalecResponseMsg" name="listProizvajalecResponse"/>
+    </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

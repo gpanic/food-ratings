@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<izdelki xmlns="http://www.example.org/Izdelki">
+	<izdelek id="0">
+		<naziv>Jabolko</naziv>
+		<kategorija id="0"/>
+		<proizvajalec id="0"/>
+		<drzavaIzvora id="0"/>
+		<ocene>
+			<ocena>6</ocena>
+			<ocena>8</ocena>
+		</ocene>
+	</izdelek>
+</izdelki>
