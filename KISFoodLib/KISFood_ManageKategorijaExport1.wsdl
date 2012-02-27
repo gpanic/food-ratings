@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="ManageKategorijaExport1_ManageKategorijaHttp_Service" targetNamespace="http://KISFoodLib/ManageKategorija" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:this="http://KISFoodLib/ManageKategorija" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import location="ManageKategorija.wsdl" namespace="http://KISFoodLib/ManageKategorija"/>
+  <wsdl:binding name="ManageKategorijaExport1_ManageKategorijaHttpBinding" type="this:ManageKategorija">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="createKategorija">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="createKategorijaRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createKategorijaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readKategorija">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="readKategorijaRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="readKategorijaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateKategorija">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="updateKategorijaRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateKategorijaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteKategorija">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="deleteKategorijaRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="deleteKategorijaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listKategorija">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="listKategorijaRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="listKategorijaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ManageKategorijaExport1_ManageKategorijaHttpService">
+    <wsdl:port binding="this:ManageKategorijaExport1_ManageKategorijaHttpBinding" name="ManageKategorijaExport1_ManageKategorijaHttpPort">
+      <soap:address location="http://localhost:9080/KISFoodWeb/sca/ManageKategorijaExport1"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

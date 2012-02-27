@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema targetNamespace="http://KISFoodLib" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="Uporabnik">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="id" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="username" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="password" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="role" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

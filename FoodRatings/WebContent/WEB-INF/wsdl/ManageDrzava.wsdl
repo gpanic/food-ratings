@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="ManageDrzava" targetNamespace="http://KISFoodLib/ManageDrzava" xmlns:bons1="http://KISFoodLib" xmlns:tns="http://KISFoodLib/ManageDrzava" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://KISFoodLib/ManageDrzava">
+      <xsd:import namespace="http://KISFoodLib" schemaLocation="Drzave.xsd"/>
+      <xsd:import namespace="http://KISFoodLib" schemaLocation="Drzava.xsd"/>
+      <xsd:element name="createDrzava">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="drzava" nillable="true" type="bons1:Drzava"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="createDrzavaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="readDrzava">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="id" nillable="true" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="readDrzavaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="drzava" nillable="true" type="bons1:Drzava"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateDrzava">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="drzava" nillable="true" type="bons1:Drzava"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateDrzavaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteDrzava">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="id" nillable="true" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteDrzavaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listDrzava">
+        <xsd:complexType>
+          <xsd:sequence/>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listDrzavaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="drzave" nillable="true" type="bons1:Drzave"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="listDrzavaRequestMsg">
+    <wsdl:part element="tns:listDrzava" name="listDrzavaParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listDrzavaResponseMsg">
+    <wsdl:part element="tns:listDrzavaResponse" name="listDrzavaResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createDrzavaResponseMsg">
+    <wsdl:part element="tns:createDrzavaResponse" name="createDrzavaResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteDrzavaResponseMsg">
+    <wsdl:part element="tns:deleteDrzavaResponse" name="deleteDrzavaResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateDrzavaResponseMsg">
+    <wsdl:part element="tns:updateDrzavaResponse" name="updateDrzavaResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="readDrzavaRequestMsg">
+    <wsdl:part element="tns:readDrzava" name="readDrzavaParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="readDrzavaResponseMsg">
+    <wsdl:part element="tns:readDrzavaResponse" name="readDrzavaResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateDrzavaRequestMsg">
+    <wsdl:part element="tns:updateDrzava" name="updateDrzavaParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteDrzavaRequestMsg">
+    <wsdl:part element="tns:deleteDrzava" name="deleteDrzavaParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createDrzavaRequestMsg">
+    <wsdl:part element="tns:createDrzava" name="createDrzavaParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ManageDrzava">
+    <wsdl:operation name="createDrzava">
+      <wsdl:input message="tns:createDrzavaRequestMsg" name="createDrzavaRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:createDrzavaResponseMsg" name="createDrzavaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readDrzava">
+      <wsdl:input message="tns:readDrzavaRequestMsg" name="readDrzavaRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:readDrzavaResponseMsg" name="readDrzavaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateDrzava">
+      <wsdl:input message="tns:updateDrzavaRequestMsg" name="updateDrzavaRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:updateDrzavaResponseMsg" name="updateDrzavaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteDrzava">
+      <wsdl:input message="tns:deleteDrzavaRequestMsg" name="deleteDrzavaRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:deleteDrzavaResponseMsg" name="deleteDrzavaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listDrzava">
+      <wsdl:input message="tns:listDrzavaRequestMsg" name="listDrzavaRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:listDrzavaResponseMsg" name="listDrzavaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

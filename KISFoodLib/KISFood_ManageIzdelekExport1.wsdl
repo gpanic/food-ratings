@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="ManageIzdelekExport1_ManageIzdelekHttp_Service" targetNamespace="http://KISFoodLib/ManageIzdelek" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:this="http://KISFoodLib/ManageIzdelek" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import location="ManageIzdelek.wsdl" namespace="http://KISFoodLib/ManageIzdelek"/>
+  <wsdl:binding name="ManageIzdelekExport1_ManageIzdelekHttpBinding" type="this:ManageIzdelek">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="createIzdelek">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="createIzdelekRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createIzdelekResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readIzdelek">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="readIzdelekRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="readIzdelekResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateIzdelek">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="updateIzdelekRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateIzdelekResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteIzdelek">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="deleteIzdelekRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="deleteIzdelekResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listIzdelek">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="listIzdelekRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="listIzdelekResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ManageIzdelekExport1_ManageIzdelekHttpService">
+    <wsdl:port binding="this:ManageIzdelekExport1_ManageIzdelekHttpBinding" name="ManageIzdelekExport1_ManageIzdelekHttpPort">
+      <soap:address location="http://localhost:9080/KISFoodWeb/sca/ManageIzdelekExport1"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

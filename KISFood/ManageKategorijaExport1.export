@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scdl:export xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jaxws="http://www.ibm.com/xmlns/prod/websphere/scdl/jaxws/6.0.0" xmlns:ns1="http://KISFoodLib/ManageKategorija" xmlns:scdl="http://www.ibm.com/xmlns/prod/websphere/scdl/6.0.0" xmlns:wsdl="http://www.ibm.com/xmlns/prod/websphere/scdl/wsdl/6.0.0" displayName="ManageKategorijaExport1" name="ManageKategorijaExport1" target="DataManager">
+  <interfaces>
+    <interface xsi:type="wsdl:WSDLPortType" preferredInteractionStyle="sync" portType="ns1:ManageKategorija"/>
+  </interfaces>
+  <esbBinding xsi:type="jaxws:JaxWsExportBinding" port="ns1:ManageKategorijaExport1_ManageKategorijaHttpPort" service="ns1:ManageKategorijaExport1_ManageKategorijaHttpService"/>
+</scdl:export>

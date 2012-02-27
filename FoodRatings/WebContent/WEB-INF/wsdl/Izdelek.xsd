@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema targetNamespace="http://KISFoodLib" xmlns:bons0="http://KISFoodLib" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:include schemaLocation="Drzava.xsd"/>
+	<xsd:include schemaLocation="Proizvajalec.xsd"/>
+	<xsd:include schemaLocation="Kategorija.xsd"/>
+	<xsd:complexType name="Izdelek">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="id" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="naziv" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="kategorija" type="bons0:Kategorija">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="proizvajalec" type="bons0:Proizvajalec">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="drzavaIzvora" type="bons0:Drzava">
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="ocene" type="xsd:int">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

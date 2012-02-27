@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="ManageUporabnikExport1_ManageUporabnikHttp_Service" targetNamespace="http://KISFoodLib/ManageUporabnik" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:this="http://KISFoodLib/ManageUporabnik" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import location="ManageUporabnik.wsdl" namespace="http://KISFoodLib/ManageUporabnik"/>
+  <wsdl:binding name="ManageUporabnikExport1_ManageUporabnikHttpBinding" type="this:ManageUporabnik">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="createUporabnik">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="createUporabnikRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createUporabnikResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readUporabnik">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="readUporabnikRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="readUporabnikResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateUporabnik">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="updateUporabnikRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateUporabnikResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteUporabnik">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="deleteUporabnikRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="deleteUporabnikResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listUporabnik">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="listUporabnikRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="listUporabnikResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loginUporabnik">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="loginUporabnikRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="loginUporabnikResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="existsUporabnik">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="existsUporabnikRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="existsUporabnikResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isAdminUporabnik">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="isAdminUporabnikRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="isAdminUporabnikResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ManageUporabnikExport1_ManageUporabnikHttpService">
+    <wsdl:port binding="this:ManageUporabnikExport1_ManageUporabnikHttpBinding" name="ManageUporabnikExport1_ManageUporabnikHttpPort">
+      <soap:address location="http://localhost:9080/KISFoodWeb/sca/ManageUporabnikExport1"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

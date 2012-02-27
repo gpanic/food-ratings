@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema targetNamespace="http://KISFoodLib" xmlns:bons0="http://KISFoodLib" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:include schemaLocation="Proizvajalec.xsd"/>
+	<xsd:complexType name="Proizvajalci">
+		<xsd:sequence>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="proizvajalci" type="bons0:Proizvajalec">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

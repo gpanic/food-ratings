@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema targetNamespace="http://KISFoodLib" xmlns:Q1="http://KISFoodLib" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:include schemaLocation="Drzava.xsd"/>
+	<xsd:complexType name="Drzave">
+		<xsd:sequence>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="drzave" type="Q1:Drzava">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

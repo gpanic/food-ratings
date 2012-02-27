@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.etools.webservice.wscbnd:ClientBinding xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.etools.webservice.wscbnd="http://www.ibm.com/websphere/appserver/schemas/5.0.2/wscbnd.xmi" xmi:id="ClientBinding_1330367782154">
+  <serviceRefs xmi:id="ServiceRef_1330367782154" serviceRefLink="service/ManageDrzavaExport1_ManageDrzavaHttpService">
+    <portQnameBindings xmi:id="PortQnameBinding_1330367782154" portQnameNamespaceLink="http://KISFoodLib/ManageDrzava" portQnameLocalNameLink="ManageDrzavaExport1_ManageDrzavaHttpPort" overriddenEndpointURI="http://localhost:9080/KISFoodWeb/sca/ManageDrzavaExport1"/>
+  </serviceRefs>
+  <serviceRefs xmi:id="ServiceRef_1330367944435" serviceRefLink="service/ManageIzdelekExport1_ManageIzdelekHttpService">
+    <portQnameBindings xmi:id="PortQnameBinding_1330367944435" portQnameNamespaceLink="http://KISFoodLib/ManageIzdelek" portQnameLocalNameLink="ManageIzdelekExport1_ManageIzdelekHttpPort" overriddenEndpointURI="http://localhost:9080/KISFoodWeb/sca/ManageIzdelekExport1"/>
+  </serviceRefs>
+  <serviceRefs xmi:id="ServiceRef_1330368148870" serviceRefLink="service/ManageKategorijaExport1_ManageKategorijaHttpService">
+    <portQnameBindings xmi:id="PortQnameBinding_1330368148870" portQnameNamespaceLink="http://KISFoodLib/ManageKategorija" portQnameLocalNameLink="ManageKategorijaExport1_ManageKategorijaHttpPort" overriddenEndpointURI="http://localhost:9080/KISFoodWeb/sca/ManageKategorijaExport1"/>
+  </serviceRefs>
+  <serviceRefs xmi:id="ServiceRef_1330368174437" serviceRefLink="service/ManageProizvajalecExport1_ManageProizvajalecHttpService">
+    <portQnameBindings xmi:id="PortQnameBinding_1330368174437" portQnameNamespaceLink="http://KISFoodLib/ManageProizvajalec" portQnameLocalNameLink="ManageProizvajalecExport1_ManageProizvajalecHttpPort" overriddenEndpointURI="http://localhost:9080/KISFoodWeb/sca/ManageProizvajalecExport1"/>
+  </serviceRefs>
+  <serviceRefs xmi:id="ServiceRef_1330368208207" serviceRefLink="service/ManageUporabnikExport1_ManageUporabnikHttpService">
+    <portQnameBindings xmi:id="PortQnameBinding_1330368208207" portQnameNamespaceLink="http://KISFoodLib/ManageUporabnik" portQnameLocalNameLink="ManageUporabnikExport1_ManageUporabnikHttpPort" overriddenEndpointURI="http://localhost:9080/KISFoodWeb/sca/ManageUporabnikExport1"/>
+  </serviceRefs>
+</com.ibm.etools.webservice.wscbnd:ClientBinding>
