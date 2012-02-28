@@ -108,6 +108,8 @@ div#header ul#menuitems_right li
 div#content_header_container
 {
 	background-color:white;
+	position:relative;
+	z-index:2;
 	-moz-box-shadow: 0px 0px 6px 0px #888;
 	-webkit-box-shadow: 0px 0px 6px 0px #888;
 	box-shadow: 0px 0px 6px 0px #888;
@@ -142,6 +144,7 @@ div#content
 	width:800px;
 	margin:0px auto 0px auto;
 	padding:0px 0px;
+	position:relative;
 }
 
 div#content h1
@@ -227,4 +230,47 @@ div#footer a, div#footer a:hover, div#footer a:visited
 	position:relative;
 	top:25px;
 	padding:0px 35px;
+}
+
+#admin_menu
+{
+	width:800px;
+	margin:0px auto 0px auto;
+	height:30px;
+
+}
+
+#admin_menu ul
+{
+	float:left;
+	margin:0px;
+	padding:0px;
+	position:relative;
+	z-index:1;
+}
+
+#admin_menu li
+{
+	display:inline;
+}
+
+#admin_menu a
+{
+	color:#3d3d3d;
+	display:inline;
+	float:left;
+	background-color:white;
+	font-size:14px;
+	padding:8px;
+	margin-right:5px;
+	text-decoration:none;
+	-moz-box-shadow: 0px 0px 6px 0px #888;
+	-webkit-box-shadow: 0px 0px 6px 0px #888;
+	box-shadow: 0px 0px 6px 0px #888;
+}
+
+#admin_menu a:hover
+{
+	background-color:#3d3d3d;
+	color:white;
 }

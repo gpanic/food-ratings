@@ -7,15 +7,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" type="text/css" href="/FoodRatings/css/style.css" />
-<title>Food Ratings</title>
+<title>Food Ratings - Administracija</title>
 </head>
 <body>
 <div id="body_container">
 	<jsp:include page="/include/header.jsp" />
 	<jsp:include page="/include/content_header.jsp" >
-		<jsp:param value="Domov" name="title"/>
-		<jsp:param value="Osrednja stran." name="subtitle"/>
+		<jsp:param value="Administracija" name="title"/>
+		<jsp:param value="Urejanje strani, podatkov in uporabnikov." name="subtitle"/>
 	</jsp:include>
+	<jsp:include page="/include/admin_menu.jsp" />
 	<div id="content">
 		<h1>Naslov</h1>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed nulla nec eros adipiscing euismod vitae ut nunc. Sed ornare risus ut massa consequat eget feugiat nisl egestas. Aliquam erat volutpat. Donec facilisis erat ac lacus feugiat at aliquam velit mattis. Vivamus et mi tellus. Vivamus luctus lorem erat, non scelerisque erat. Ut interdum gravida orci, et bibendum tortor volutpat ut. Nullam in justo est. Ut imperdiet adipiscing tortor ut dictum. Nunc venenatis porttitor dui vitae auctor. Proin pretium eleifend libero, ac faucibus purus tristique vel. Pellentesque id semper urna. Morbi porttitor auctor orci.</p>
