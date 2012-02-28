@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema targetNamespace="http://KISFoodLib"
-	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:bons0="http://KISFoodLib">
+	<xsd:include schemaLocation="Ocena.xsd"></xsd:include>
 	<xsd:complexType name="Drzava">
 		<xsd:sequence>
 			<xsd:element minOccurs="0" name="id" type="xsd:int"></xsd:element>
@@ -8,7 +10,7 @@
 			<xsd:element minOccurs="0" name="kratica"
 				type="xsd:string">
 			</xsd:element>
-			<xsd:element minOccurs="0" name="ocene" type="xsd:int"
+			<xsd:element minOccurs="0" name="ocene" type="bons0:Ocena"
 				maxOccurs="unbounded">
 			</xsd:element>
 		</xsd:sequence>

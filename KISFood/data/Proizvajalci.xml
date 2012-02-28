@@ -5,8 +5,7 @@
 		<drzava>Svica</drzava>
 		<mesto>Vavey</mesto>
 		<ocene>
-			<ocena>8</ocena>
-			<ocena>9</ocena>
+			<ocena idUser="0">8</ocena>
 		</ocene>
 	</proizvajalec>
 </proizvajalci>

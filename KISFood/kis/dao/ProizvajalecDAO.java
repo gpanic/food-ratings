@@ -84,12 +84,18 @@ public class ProizvajalecDAO implements DAO<DataObject, Integer> {
 							proizvajalecDO.set(att.getNodeName(), att.getFirstChild().getNodeValue());
 						} else {
 							
-							ArrayList<Integer> oceneList=new ArrayList<Integer>();
+							ArrayList<DataObject> oceneList=new ArrayList<DataObject>();
 							NodeList ocene=att.getChildNodes();
 							for(int k=0;k<ocene.getLength();k++) {
 								Node ocena=ocene.item(k);
 								if(ocena.getNodeName().equals("ocena")) {
-									oceneList.add(Integer.parseInt(ocena.getFirstChild().getNodeValue()));
+									bof=(BOFactory)ServiceManager.INSTANCE.locateService("com/ibm/websphere/bo/BOFactory");
+									DataObject ocenaDO=bof.create("http://KISFoodLib", "Ocena");
+									
+									ocenaDO.setInt("idUser", Integer.parseInt(ocena.getAttributes().getNamedItem("idUser").getNodeValue()));
+									ocenaDO.setInt("ocena", Integer.parseInt(ocena.getFirstChild().getNodeValue()));
+									
+									oceneList.add(ocenaDO);
 								}
 							}
 							proizvajalecDO.set("ocene", oceneList);
@@ -131,10 +137,11 @@ public class ProizvajalecDAO implements DAO<DataObject, Integer> {
 							Element e3=doc.createElement("ocene");
 							n.appendChild(e3);
 							
-							List<Integer> ocene=data.getList("ocene");
-							for(Integer l:ocene) {
+							List<DataObject> ocene=data.getList("ocene");
+							for(DataObject dataObj:ocene) {
 								Element e2=doc.createElement("ocena");
-								e2.setTextContent(Integer.toString(l));
+								e2.setTextContent(Integer.toString(dataObj.getInt("ocena")));
+								e2.setAttribute("idUser", Integer.toString(dataObj.getInt("idUser")));
 								e3.appendChild(e2);
 							}
 						}
@@ -189,12 +196,18 @@ public class ProizvajalecDAO implements DAO<DataObject, Integer> {
 							proizvajalecDO.set(att.getNodeName(), att.getFirstChild().getNodeValue());
 						} else {
 							
-							ArrayList<Integer> oceneList=new ArrayList<Integer>();
+							ArrayList<DataObject> oceneList=new ArrayList<DataObject>();
 							NodeList ocene=att.getChildNodes();
 							for(int k=0;k<ocene.getLength();k++) {
 								Node ocena=ocene.item(k);
 								if(ocena.getNodeName().equals("ocena")) {
-									oceneList.add(Integer.parseInt(ocena.getFirstChild().getNodeValue()));
+									bof=(BOFactory)ServiceManager.INSTANCE.locateService("com/ibm/websphere/bo/BOFactory");
+									DataObject ocenaDO=bof.create("http://KISFoodLib", "Ocena");
+									
+									ocenaDO.setInt("idUser", Integer.parseInt(ocena.getAttributes().getNamedItem("idUser").getNodeValue()));
+									ocenaDO.setInt("ocena", Integer.parseInt(ocena.getFirstChild().getNodeValue()));
+									
+									oceneList.add(ocenaDO);
 								}
 							}
 							proizvajalecDO.set("ocene", oceneList);

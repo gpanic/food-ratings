@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><xsd:schema targetNamespace="http://KISFoodLib" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema targetNamespace="http://KISFoodLib" xmlns:bons0="http://KISFoodLib" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:include schemaLocation="Ocena.xsd"/>
 	<xsd:complexType name="Drzava">
 		<xsd:sequence>
 			<xsd:element minOccurs="0" name="id" type="xsd:int"/>
 			<xsd:element minOccurs="0" name="ime" type="xsd:string"/>
 			<xsd:element minOccurs="0" name="kratica" type="xsd:string">
 			</xsd:element>
-			<xsd:element maxOccurs="unbounded" minOccurs="0" name="ocene" type="xsd:int">
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="ocene" type="bons0:Ocena">
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>

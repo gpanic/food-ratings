@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><xsd:schema targetNamespace="http://KISFoodLib" xmlns:bons0="http://KISFoodLib" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:include schemaLocation="Ocena.xsd"/>
 	<xsd:include schemaLocation="Drzava.xsd"/>
 	<xsd:include schemaLocation="Proizvajalec.xsd"/>
 	<xsd:include schemaLocation="Kategorija.xsd"/>
@@ -13,7 +14,7 @@
 			</xsd:element>
 			<xsd:element minOccurs="0" name="drzavaIzvora" type="bons0:Drzava">
 			</xsd:element>
-			<xsd:element maxOccurs="unbounded" minOccurs="0" name="ocene" type="xsd:int">
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="ocene" type="bons0:Ocena">
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>

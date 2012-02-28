@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
-<%@page import="client.izdelek.Izdelek"%>
-<%@page import="client.izdelek.ManageIzdelekExport1ManageIzdelekHttpService"%>
-<%@page import="client.izdelek.ManageIzdelekExport1_ManageIzdelekHttpPortProxy"%>
-<%@page import="client.izdelek.ManageIzdelek"%>
+<%@page import="foodratings.client.proizvajalec.ManageProizvajalecProxy"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -40,9 +37,8 @@
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed nulla nec eros adipiscing euismod vitae ut nunc. Sed ornare risus ut massa consequat eget feugiat nisl egestas. Aliquam erat volutpat. Donec facilisis erat ac lacus feugiat at aliquam velit mattis. Vivamus et mi tellus. Vivamus luctus lorem erat, non scelerisque erat. Ut interdum gravida orci, et bibendum tortor volutpat ut. Nullam in justo est. Ut imperdiet adipiscing tortor ut dictum. Nunc venenatis porttitor dui vitae auctor. Proin pretium eleifend libero, ac faucibus purus tristique vel. Pellentesque id semper urna. Morbi porttitor auctor orci.</p>
 		<p>Nam sit amet erat lacus, sit amet dictum mauris. Suspendisse mattis scelerisque nunc quis condimentum. Donec et lectus a odio pharetra placerat sed eu libero. Curabitur tincidunt fermentum enim, nec laoreet metus semper non. Vivamus ut mauris porttitor dui pretium vulputate nec sed tellus. Nam diam velit, pharetra vitae cursus non, pulvinar ac nibh. Etiam pretium, metus ut convallis pretium, quam est commodo massa, id laoreet justo velit ut sapien. Maecenas aliquam, sem in lobortis convallis, lacus ligula ultrices massa, id euismod justo mi vel orci. Proin rhoncus mattis condimentum. Donec in dui neque. Aliquam tempus luctus odio in imperdiet. Vivamus accumsan nulla id tellus mattis iaculis. Proin eget mauris risus.</p>
 		<%
-			ManageIzdelek mi=new ManageIzdelekExport1ManageIzdelekHttpService().getManageIzdelekExport1ManageIzdelekHttpPort();
-			Izdelek i=mi.readIzdelek(0);
-			out.println(i.getNaziv());
+			ManageProizvajalecProxy mpp=new ManageProizvajalecProxy();
+			out.println(mpp.readProizvajalec(0).getNaziv());
 		%>
 	</div>
 	<div class="push"></div>

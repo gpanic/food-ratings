@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema targetNamespace="http://KISFoodLib"
-	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:bons0="http://KISFoodLib">
+	<xsd:include schemaLocation="Ocena.xsd"></xsd:include>
 	<xsd:complexType name="Proizvajalec">
 		<xsd:sequence>
 			<xsd:element minOccurs="0" name="id" type="xsd:int"></xsd:element>
@@ -12,13 +14,8 @@
 
 
 			<xsd:element minOccurs="0" name="ocene"
-				maxOccurs="unbounded">
-				<xsd:simpleType>
-					<xsd:restriction base="xsd:int">
-						<xsd:minExclusive value="1"></xsd:minExclusive>
-						<xsd:maxExclusive value="10"></xsd:maxExclusive>
-					</xsd:restriction>
-				</xsd:simpleType>
+				maxOccurs="unbounded" type="bons0:Ocena">
+
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
