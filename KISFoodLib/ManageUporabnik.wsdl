@@ -81,7 +81,7 @@
             <xsd:element name="loginUporabnikResponse">
         <xsd:complexType>
           <xsd:sequence>
-            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+            <xsd:element name="result" nillable="true" type="bons1:Uporabnik"/>
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>

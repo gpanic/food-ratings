@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="result" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="result" type="{http://KISFoodLib}Uporabnik"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -38,18 +38,18 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "loginUporabnikResponse")
 public class LoginUporabnikResponse {
 
-    @XmlElement(required = true, type = Boolean.class, nillable = true)
-    protected Boolean result;
+    @XmlElement(required = true, nillable = true)
+    protected Uporabnik result;
 
     /**
      * Gets the value of the result property.
      * 
      * @return
      *     possible object is
-     *     {@link Boolean }
+     *     {@link Uporabnik }
      *     
      */
-    public Boolean isResult() {
+    public Uporabnik getResult() {
         return result;
     }
 
@@ -58,10 +58,10 @@ public class LoginUporabnikResponse {
      * 
      * @param value
      *     allowed object is
-     *     {@link Boolean }
+     *     {@link Uporabnik }
      *     
      */
-    public void setResult(Boolean value) {
+    public void setResult(Uporabnik value) {
         this.result = value;
     }
 

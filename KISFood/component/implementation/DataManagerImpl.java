@@ -509,11 +509,11 @@ public class DataManagerImpl {
 	 * type conveys that it is a complex type. Please refer to the WSDL Definition for more information 
 	 * on the type of input, output and fault(s).
 	 */
-	public Boolean loginUporabnik(DataObject uporabnik) {
+	public DataObject loginUporabnik(DataObject uporabnik) {
 		DataObject response = (DataObject) this
 				.locateService_ManageUporabnikPartner().invoke(
 						"loginUporabnik", uporabnik);
-		return response.getBoolean("result");
+		return response.getDataObject("result");
 	}
 
 	/**

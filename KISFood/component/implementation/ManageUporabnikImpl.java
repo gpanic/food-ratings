@@ -112,8 +112,8 @@ public class ManageUporabnikImpl {
 	 * type conveys that it is a complex type. Please refer to the WSDL Definition for more information 
 	 * on the type of input, output and fault(s).
 	 */
-	public Boolean loginUporabnik(DataObject uporabnik) {
-		System.out.println("MANAGEKATEGORIJA LOGIN");
+	public DataObject loginUporabnik(DataObject uporabnik) {
+		System.out.println("MANAGEUPORABNIK LOGIN");
 		UporabnikDAO udao = new UporabnikDAO();
 		List<DataObject> list = udao.list();
 		for (DataObject dataObject : list) {
@@ -121,10 +121,10 @@ public class ManageUporabnikImpl {
 					uporabnik.getString("username"))
 					&& dataObject.getString("password").equals(
 							uporabnik.getString("password"))) {
-				return true;
+				return dataObject;
 			}
 		}
-		return false;
+		return null;
 	}
 
 	/**
@@ -136,7 +136,7 @@ public class ManageUporabnikImpl {
 	 * on the type of input, output and fault(s).
 	 */
 	public Boolean existsUporabnik(DataObject uporabnik) {
-		System.out.println("MANAGEKATEGORIJA EXISTS");
+		System.out.println("MANAGEUPORABNIK EXISTS");
 		UporabnikDAO udao = new UporabnikDAO();
 		List<DataObject> list = udao.list();
 		for (DataObject dataObject : list) {

@@ -34,19 +34,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ExistsUporabnikResponse }
+     * Create an instance of {@link CreateUporabnikResponse }
      * 
      */
-    public ExistsUporabnikResponse createExistsUporabnikResponse() {
-        return new ExistsUporabnikResponse();
-    }
-
-    /**
-     * Create an instance of {@link UpdateUporabnik }
-     * 
-     */
-    public UpdateUporabnik createUpdateUporabnik() {
-        return new UpdateUporabnik();
+    public CreateUporabnikResponse createCreateUporabnikResponse() {
+        return new CreateUporabnikResponse();
     }
 
     /**
@@ -58,11 +50,67 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link IsAdminUporabnik }
+     * Create an instance of {@link ListUporabnik }
      * 
      */
-    public IsAdminUporabnik createIsAdminUporabnik() {
-        return new IsAdminUporabnik();
+    public ListUporabnik createListUporabnik() {
+        return new ListUporabnik();
+    }
+
+    /**
+     * Create an instance of {@link ReadUporabnikResponse }
+     * 
+     */
+    public ReadUporabnikResponse createReadUporabnikResponse() {
+        return new ReadUporabnikResponse();
+    }
+
+    /**
+     * Create an instance of {@link UpdateUporabnik }
+     * 
+     */
+    public UpdateUporabnik createUpdateUporabnik() {
+        return new UpdateUporabnik();
+    }
+
+    /**
+     * Create an instance of {@link UpdateUporabnikResponse }
+     * 
+     */
+    public UpdateUporabnikResponse createUpdateUporabnikResponse() {
+        return new UpdateUporabnikResponse();
+    }
+
+    /**
+     * Create an instance of {@link LoginUporabnik }
+     * 
+     */
+    public LoginUporabnik createLoginUporabnik() {
+        return new LoginUporabnik();
+    }
+
+    /**
+     * Create an instance of {@link ExistsUporabnikResponse }
+     * 
+     */
+    public ExistsUporabnikResponse createExistsUporabnikResponse() {
+        return new ExistsUporabnikResponse();
+    }
+
+    /**
+     * Create an instance of {@link DeleteUporabnik }
+     * 
+     */
+    public DeleteUporabnik createDeleteUporabnik() {
+        return new DeleteUporabnik();
+    }
+
+    /**
+     * Create an instance of {@link ReadUporabnik }
+     * 
+     */
+    public ReadUporabnik createReadUporabnik() {
+        return new ReadUporabnik();
     }
 
     /**
@@ -82,14 +130,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ReadUporabnik }
-     * 
-     */
-    public ReadUporabnik createReadUporabnik() {
-        return new ReadUporabnik();
-    }
-
-    /**
      * Create an instance of {@link Uporabniki }
      * 
      */
@@ -106,19 +146,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link LoginUporabnik }
+     * Create an instance of {@link IsAdminUporabnik }
      * 
      */
-    public LoginUporabnik createLoginUporabnik() {
-        return new LoginUporabnik();
-    }
-
-    /**
-     * Create an instance of {@link UpdateUporabnikResponse }
-     * 
-     */
-    public UpdateUporabnikResponse createUpdateUporabnikResponse() {
-        return new UpdateUporabnikResponse();
+    public IsAdminUporabnik createIsAdminUporabnik() {
+        return new IsAdminUporabnik();
     }
 
     /**
@@ -127,30 +159,6 @@ public class ObjectFactory {
      */
     public CreateUporabnik createCreateUporabnik() {
         return new CreateUporabnik();
-    }
-
-    /**
-     * Create an instance of {@link DeleteUporabnik }
-     * 
-     */
-    public DeleteUporabnik createDeleteUporabnik() {
-        return new DeleteUporabnik();
-    }
-
-    /**
-     * Create an instance of {@link CreateUporabnikResponse }
-     * 
-     */
-    public CreateUporabnikResponse createCreateUporabnikResponse() {
-        return new CreateUporabnikResponse();
-    }
-
-    /**
-     * Create an instance of {@link ListUporabnik }
-     * 
-     */
-    public ListUporabnik createListUporabnik() {
-        return new ListUporabnik();
     }
 
     /**
@@ -167,14 +175,6 @@ public class ObjectFactory {
      */
     public Uporabnik createUporabnik() {
         return new Uporabnik();
-    }
-
-    /**
-     * Create an instance of {@link ReadUporabnikResponse }
-     * 
-     */
-    public ReadUporabnikResponse createReadUporabnikResponse() {
-        return new ReadUporabnikResponse();
     }
 
 }

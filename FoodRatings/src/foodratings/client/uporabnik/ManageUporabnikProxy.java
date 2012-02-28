@@ -135,7 +135,7 @@ public class ManageUporabnikProxy{
         return _getDescriptor().getProxy().listUporabnik();
     }
 
-    public Boolean loginUporabnik(Uporabnik uporabnik) {
+    public Uporabnik loginUporabnik(Uporabnik uporabnik) {
         return _getDescriptor().getProxy().loginUporabnik(uporabnik);
     }
 

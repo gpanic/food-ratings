@@ -91,13 +91,13 @@ public interface ManageUporabnik {
      * 
      * @param uporabnik
      * @return
-     *     returns java.lang.Boolean
+     *     returns foodratings.client.uporabnik.Uporabnik
      */
     @WebMethod
     @WebResult(name = "result", targetNamespace = "")
     @RequestWrapper(localName = "loginUporabnik", targetNamespace = "http://KISFoodLib/ManageUporabnik", className = "foodratings.client.uporabnik.LoginUporabnik")
     @ResponseWrapper(localName = "loginUporabnikResponse", targetNamespace = "http://KISFoodLib/ManageUporabnik", className = "foodratings.client.uporabnik.LoginUporabnikResponse")
-    public Boolean loginUporabnik(
+    public Uporabnik loginUporabnik(
         @WebParam(name = "uporabnik", targetNamespace = "")
         Uporabnik uporabnik);
 
