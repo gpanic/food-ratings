@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="DataManager" targetNamespace="http://KISFoodLib/DataManager" xmlns:bons1="http://KISFoodLib" xmlns:tns="http://KISFoodLib/DataManager" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://KISFoodLib/DataManager" xmlns:bons="http://KISFoodLib" xmlns:bons12="http://KISFoodLib" xmlns:bons123="http://KISFoodLib" xmlns:bons1234="http://KISFoodLib" xmlns:bons12345="http://KISFoodLib" xmlns:bons123456="http://KISFoodLib" xmlns:bons1234567="http://KISFoodLib" xmlns:bons12345678="http://KISFoodLib" xmlns:bons123456789="http://KISFoodLib">
+      <xsd:import namespace="http://KISFoodLib" schemaLocation="Uporabniki.xsd"/>
+      <xsd:import namespace="http://KISFoodLib" schemaLocation="Uporabnik.xsd"/>
+      <xsd:import namespace="http://KISFoodLib" schemaLocation="./Uporabnik.xsd"/>
+      <xsd:import namespace="http://KISFoodLib" schemaLocation="./Uporabniki.xsd"/>
+      <xsd:import namespace="http://KISFoodLib" schemaLocation="Proizvajalec.xsd"/>
+      <xsd:import namespace="http://KISFoodLib" schemaLocation="Proizvajalci.xsd"/>
+      <xsd:import namespace="http://KISFoodLib" schemaLocation="./Proizvajalec.xsd"/>
+      <xsd:import namespace="http://KISFoodLib" schemaLocation="./Proizvajalci.xsd"/>
+      <xsd:import namespace="http://KISFoodLib" schemaLocation="Kategorije.xsd"/>
+      <xsd:import namespace="http://KISFoodLib" schemaLocation="Kategorija.xsd"/>
+      <xsd:import namespace="http://KISFoodLib" schemaLocation="./Kategorija.xsd"/>
+      <xsd:import namespace="http://KISFoodLib" schemaLocation="./Kategorije.xsd"/>
+      <xsd:import namespace="http://KISFoodLib" schemaLocation="Izdelek.xsd"/>
+      <xsd:import namespace="http://KISFoodLib" schemaLocation="Izdelki.xsd"/>
+      <xsd:import namespace="http://KISFoodLib" schemaLocation="./Izdelek.xsd"/>
+      <xsd:import namespace="http://KISFoodLib" schemaLocation="./Izdelki.xsd"/>
+      <xsd:import namespace="http://KISFoodLib" schemaLocation="Drzava.xsd"/>
+      <xsd:import namespace="http://KISFoodLib" schemaLocation="Drzave.xsd"/>
+      <xsd:import namespace="http://KISFoodLib" schemaLocation="./Drzava.xsd"/>
+      <xsd:import namespace="http://KISFoodLib" schemaLocation="./Drzave.xsd"/>
+      <xsd:element name="createDrzava">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="drzava" nillable="true" type="bons:Drzava"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="createDrzavaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="readDrzava">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="id" nillable="true" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="readDrzavaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="drzava" nillable="true" type="bons:Drzava"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateDrzava">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="drzava" nillable="true" type="bons:Drzava"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateDrzavaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteDrzava">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="id" nillable="true" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteDrzavaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listDrzava">
+        <xsd:complexType>
+          <xsd:sequence/>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listDrzavaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="drzave" nillable="true" type="bons:Drzave"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="createIzdelek">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="izdelek" nillable="true" type="bons123:Izdelek"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="createIzdelekResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="readIzdelek">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="id" nillable="true" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="readIzdelekResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="izdelek" nillable="true" type="bons123:Izdelek"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateIzdelek">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="izdelek" nillable="true" type="bons123:Izdelek"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateIzdelekResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteIzdelek">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="id" nillable="true" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteIzdelekResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listIzdelek">
+        <xsd:complexType>
+          <xsd:sequence/>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listIzdelekResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="izdelki" nillable="true" type="bons123:Izdelki"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="createKategorija">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="kategorija" nillable="true" type="bons123:Kategorija"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="createKategorijaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="readKategorija">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="id" nillable="true" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="readKategorijaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="kategorija" nillable="true" type="bons123:Kategorija"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateKategorija">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="kategorija" nillable="true" type="bons123:Kategorija"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateKategorijaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteKategorija">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="id" nillable="true" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteKategorijaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listKategorija">
+        <xsd:complexType>
+          <xsd:sequence/>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listKategorijaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="kategorije" nillable="true" type="bons123:Kategorije"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="createProizvajalec">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="proizvajalec" nillable="true" type="bons123:Proizvajalec"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="createProizvajalecResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="readProizvajalec">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="id" nillable="true" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="readProizvajalecResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="proizvajalec" nillable="true" type="bons123:Proizvajalec"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateProizvajalec">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="proizvajalec" nillable="true" type="bons123:Proizvajalec"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateProizvajalecResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteProizvajalec">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="id" nillable="true" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteProizvajalecResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listProizvajalec">
+        <xsd:complexType>
+          <xsd:sequence/>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listProizvajalecResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="proizvajalci" nillable="true" type="bons123:Proizvajalci"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="createUporabnik">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="uporabnik" nillable="true" type="bons123:Uporabnik"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="createUporabnikResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="readUporabnik">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="id" nillable="true" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="readUporabnikResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="uporabnik" nillable="true" type="bons123:Uporabnik"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateUporabnik">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="uporabnik" nillable="true" type="bons123:Uporabnik"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateUporabnikResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteUporabnik">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="id" nillable="true" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteUporabnikResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listUporabnik">
+        <xsd:complexType>
+          <xsd:sequence/>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listUporabnikResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="uporabniki" nillable="true" type="bons123:Uporabniki"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="loginUporabnik">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="uporabnik" nillable="true" type="bons123:Uporabnik"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="loginUporabnikResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="bons123:Uporabnik"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="existsUporabnik">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="uporabnik" nillable="true" type="bons123:Uporabnik"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="existsUporabnikResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="isAdminUporabnik">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="id" nillable="true" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="isAdminUporabnikResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="updateKategorijaRequestMsg">
+    <wsdl:part element="tns:updateKategorija" name="updateKategorijaParameters1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listProizvajalecResponseMsg">
+    <wsdl:part element="tns:listProizvajalecResponse" name="listProizvajalecResult1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateUporabnikResponseMsg">
+    <wsdl:part element="tns:updateUporabnikResponse" name="updateUporabnikResult1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateKategorijaResponseMsg">
+    <wsdl:part element="tns:updateKategorijaResponse" name="updateKategorijaResult1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isAdminUporabnikResponseMsg">
+    <wsdl:part element="tns:isAdminUporabnikResponse" name="isAdminUporabnikResult1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteDrzavaResponseMsg">
+    <wsdl:part element="tns:deleteDrzavaResponse" name="deleteDrzavaResult1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createIzdelekRequestMsg">
+    <wsdl:part element="tns:createIzdelek" name="createIzdelekParameters1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="readDrzavaResponseMsg">
+    <wsdl:part element="tns:readDrzavaResponse" name="readDrzavaResult1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateProizvajalecResponseMsg">
+    <wsdl:part element="tns:updateProizvajalecResponse" name="updateProizvajalecResult1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createDrzavaRequestMsg">
+    <wsdl:part element="tns:createDrzava" name="createDrzavaParameters1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listDrzavaResponseMsg">
+    <wsdl:part element="tns:listDrzavaResponse" name="listDrzavaResult1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="loginUporabnikResponseMsg">
+    <wsdl:part element="tns:loginUporabnikResponse" name="loginUporabnikResult1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createProizvajalecRequestMsg">
+    <wsdl:part element="tns:createProizvajalec" name="createProizvajalecParameters1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteUporabnikRequestMsg">
+    <wsdl:part element="tns:deleteUporabnik" name="deleteUporabnikParameters1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="loginUporabnikRequestMsg">
+    <wsdl:part element="tns:loginUporabnik" name="loginUporabnikParameters1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="readIzdelekRequestMsg">
+    <wsdl:part element="tns:readIzdelek" name="readIzdelekParameters1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteDrzavaRequestMsg">
+    <wsdl:part element="tns:deleteDrzava" name="deleteDrzavaParameters1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listDrzavaRequestMsg">
+    <wsdl:part element="tns:listDrzava" name="listDrzavaParameters1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listIzdelekRequestMsg">
+    <wsdl:part element="tns:listIzdelek" name="listIzdelekParameters1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateDrzavaResponseMsg">
+    <wsdl:part element="tns:updateDrzavaResponse" name="updateDrzavaResult1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="readDrzavaRequestMsg">
+    <wsdl:part element="tns:readDrzava" name="readDrzavaParameters1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="existsUporabnikResponseMsg">
+    <wsdl:part element="tns:existsUporabnikResponse" name="existsUporabnikResult1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="readProizvajalecResponseMsg">
+    <wsdl:part element="tns:readProizvajalecResponse" name="readProizvajalecResult1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteProizvajalecRequestMsg">
+    <wsdl:part element="tns:deleteProizvajalec" name="deleteProizvajalecParameters1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listProizvajalecRequestMsg">
+    <wsdl:part element="tns:listProizvajalec" name="listProizvajalecParameters1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateUporabnikRequestMsg">
+    <wsdl:part element="tns:updateUporabnik" name="updateUporabnikParameters1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateDrzavaRequestMsg">
+    <wsdl:part element="tns:updateDrzava" name="updateDrzavaParameters1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createIzdelekResponseMsg">
+    <wsdl:part element="tns:createIzdelekResponse" name="createIzdelekResult1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isAdminUporabnikRequestMsg">
+    <wsdl:part element="tns:isAdminUporabnik" name="isAdminUporabnikParameters1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="readProizvajalecRequestMsg">
+    <wsdl:part element="tns:readProizvajalec" name="readProizvajalecParameters1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createKategorijaRequestMsg">
+    <wsdl:part element="tns:createKategorija" name="createKategorijaParameters1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteIzdelekResponseMsg">
+    <wsdl:part element="tns:deleteIzdelekResponse" name="deleteIzdelekResult1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createUporabnikResponseMsg">
+    <wsdl:part element="tns:createUporabnikResponse" name="createUporabnikResult1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateProizvajalecRequestMsg">
+    <wsdl:part element="tns:updateProizvajalec" name="updateProizvajalecParameters1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createKategorijaResponseMsg">
+    <wsdl:part element="tns:createKategorijaResponse" name="createKategorijaResult1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteIzdelekRequestMsg">
+    <wsdl:part element="tns:deleteIzdelek" name="deleteIzdelekParameters1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createUporabnikRequestMsg">
+    <wsdl:part element="tns:createUporabnik" name="createUporabnikParameters1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteKategorijaResponseMsg">
+    <wsdl:part element="tns:deleteKategorijaResponse" name="deleteKategorijaResult1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteKategorijaRequestMsg">
+    <wsdl:part element="tns:deleteKategorija" name="deleteKategorijaParameters1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createProizvajalecResponseMsg">
+    <wsdl:part element="tns:createProizvajalecResponse" name="createProizvajalecResult1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteUporabnikResponseMsg">
+    <wsdl:part element="tns:deleteUporabnikResponse" name="deleteUporabnikResult1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listIzdelekResponseMsg">
+    <wsdl:part element="tns:listIzdelekResponse" name="listIzdelekResult1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="readIzdelekResponseMsg">
+    <wsdl:part element="tns:readIzdelekResponse" name="readIzdelekResult1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateIzdelekResponseMsg">
+    <wsdl:part element="tns:updateIzdelekResponse" name="updateIzdelekResult1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateIzdelekRequestMsg">
+    <wsdl:part element="tns:updateIzdelek" name="updateIzdelekParameters1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteProizvajalecResponseMsg">
+    <wsdl:part element="tns:deleteProizvajalecResponse" name="deleteProizvajalecResult1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listUporabnikResponseMsg">
+    <wsdl:part element="tns:listUporabnikResponse" name="listUporabnikResult1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="readKategorijaResponseMsg">
+    <wsdl:part element="tns:readKategorijaResponse" name="readKategorijaResult1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listKategorijaRequestMsg">
+    <wsdl:part element="tns:listKategorija" name="listKategorijaParameters1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="readUporabnikRequestMsg">
+    <wsdl:part element="tns:readUporabnik" name="readUporabnikParameters1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createDrzavaResponseMsg">
+    <wsdl:part element="tns:createDrzavaResponse" name="createDrzavaResult1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="readKategorijaRequestMsg">
+    <wsdl:part element="tns:readKategorija" name="readKategorijaParameters1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listKategorijaResponseMsg">
+    <wsdl:part element="tns:listKategorijaResponse" name="listKategorijaResult1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="readUporabnikResponseMsg">
+    <wsdl:part element="tns:readUporabnikResponse" name="readUporabnikResult1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listUporabnikRequestMsg">
+    <wsdl:part element="tns:listUporabnik" name="listUporabnikParameters1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="existsUporabnikRequestMsg">
+    <wsdl:part element="tns:existsUporabnik" name="existsUporabnikParameters1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="DataManager">
+    <wsdl:operation name="createDrzava">
+      <wsdl:input message="tns:createDrzavaRequestMsg" name="createDrzavaRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:createDrzavaResponseMsg" name="createDrzavaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readDrzava">
+      <wsdl:input message="tns:readDrzavaRequestMsg" name="readDrzavaRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:readDrzavaResponseMsg" name="readDrzavaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateDrzava">
+      <wsdl:input message="tns:updateDrzavaRequestMsg" name="updateDrzavaRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:updateDrzavaResponseMsg" name="updateDrzavaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteDrzava">
+      <wsdl:input message="tns:deleteDrzavaRequestMsg" name="deleteDrzavaRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:deleteDrzavaResponseMsg" name="deleteDrzavaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listDrzava">
+      <wsdl:input message="tns:listDrzavaRequestMsg" name="listDrzavaRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:listDrzavaResponseMsg" name="listDrzavaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createIzdelek">
+      <wsdl:input message="tns:createIzdelekRequestMsg" name="createIzdelekRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:createIzdelekResponseMsg" name="createIzdelekResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readIzdelek">
+      <wsdl:input message="tns:readIzdelekRequestMsg" name="readIzdelekRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:readIzdelekResponseMsg" name="readIzdelekResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateIzdelek">
+      <wsdl:input message="tns:updateIzdelekRequestMsg" name="updateIzdelekRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:updateIzdelekResponseMsg" name="updateIzdelekResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteIzdelek">
+      <wsdl:input message="tns:deleteIzdelekRequestMsg" name="deleteIzdelekRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:deleteIzdelekResponseMsg" name="deleteIzdelekResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listIzdelek">
+      <wsdl:input message="tns:listIzdelekRequestMsg" name="listIzdelekRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:listIzdelekResponseMsg" name="listIzdelekResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createKategorija">
+      <wsdl:input message="tns:createKategorijaRequestMsg" name="createKategorijaRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:createKategorijaResponseMsg" name="createKategorijaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readKategorija">
+      <wsdl:input message="tns:readKategorijaRequestMsg" name="readKategorijaRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:readKategorijaResponseMsg" name="readKategorijaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateKategorija">
+      <wsdl:input message="tns:updateKategorijaRequestMsg" name="updateKategorijaRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:updateKategorijaResponseMsg" name="updateKategorijaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteKategorija">
+      <wsdl:input message="tns:deleteKategorijaRequestMsg" name="deleteKategorijaRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:deleteKategorijaResponseMsg" name="deleteKategorijaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listKategorija">
+      <wsdl:input message="tns:listKategorijaRequestMsg" name="listKategorijaRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:listKategorijaResponseMsg" name="listKategorijaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createProizvajalec">
+      <wsdl:input message="tns:createProizvajalecRequestMsg" name="createProizvajalecRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:createProizvajalecResponseMsg" name="createProizvajalecResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readProizvajalec">
+      <wsdl:input message="tns:readProizvajalecRequestMsg" name="readProizvajalecRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:readProizvajalecResponseMsg" name="readProizvajalecResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateProizvajalec">
+      <wsdl:input message="tns:updateProizvajalecRequestMsg" name="updateProizvajalecRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:updateProizvajalecResponseMsg" name="updateProizvajalecResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteProizvajalec">
+      <wsdl:input message="tns:deleteProizvajalecRequestMsg" name="deleteProizvajalecRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:deleteProizvajalecResponseMsg" name="deleteProizvajalecResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listProizvajalec">
+      <wsdl:input message="tns:listProizvajalecRequestMsg" name="listProizvajalecRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:listProizvajalecResponseMsg" name="listProizvajalecResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createUporabnik">
+      <wsdl:input message="tns:createUporabnikRequestMsg" name="createUporabnikRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:createUporabnikResponseMsg" name="createUporabnikResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readUporabnik">
+      <wsdl:input message="tns:readUporabnikRequestMsg" name="readUporabnikRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:readUporabnikResponseMsg" name="readUporabnikResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateUporabnik">
+      <wsdl:input message="tns:updateUporabnikRequestMsg" name="updateUporabnikRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:updateUporabnikResponseMsg" name="updateUporabnikResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteUporabnik">
+      <wsdl:input message="tns:deleteUporabnikRequestMsg" name="deleteUporabnikRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:deleteUporabnikResponseMsg" name="deleteUporabnikResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listUporabnik">
+      <wsdl:input message="tns:listUporabnikRequestMsg" name="listUporabnikRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:listUporabnikResponseMsg" name="listUporabnikResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loginUporabnik">
+      <wsdl:input message="tns:loginUporabnikRequestMsg" name="loginUporabnikRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:loginUporabnikResponseMsg" name="loginUporabnikResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="existsUporabnik">
+      <wsdl:input message="tns:existsUporabnikRequestMsg" name="existsUporabnikRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:existsUporabnikResponseMsg" name="existsUporabnikResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isAdminUporabnik">
+      <wsdl:input message="tns:isAdminUporabnikRequestMsg" name="isAdminUporabnikRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:isAdminUporabnikResponseMsg" name="isAdminUporabnikResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

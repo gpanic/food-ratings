@@ -1,0 +1,1 @@
+<div class="errorMessage center"><span><%=request.getParameter("errorMessage") %></span></div>
