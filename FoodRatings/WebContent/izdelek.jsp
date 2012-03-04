@@ -8,8 +8,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%
 	int id=-1;
-	if(request.getParameter("idIzdelek")!=null) {
-		id=Integer.parseInt(request.getParameter("idIzdelek"));
+	if(request.getParameter("idItem")!=null) {
+		id=Integer.parseInt(request.getParameter("idItem"));
 	} else {
 		if(request.getHeader("Referer")!=null) {
 	response.sendRedirect(request.getHeader("Referer"));

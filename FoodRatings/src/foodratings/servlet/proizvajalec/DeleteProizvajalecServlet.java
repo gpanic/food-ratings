@@ -1,4 +1,4 @@
-package foodratings.servlet.izdelek;
+package foodratings.servlet.proizvajalec;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -9,15 +9,15 @@ import javax.servlet.http.HttpServletResponse;
 import foodratings.client.DataManagerProxy;
 
 /**
- * Servlet implementation class DeleteIzdelekServlet
+ * Servlet implementation class DeleteProizvajalecServlet
  */
-public class DeleteIzdelekServlet extends HttpServlet {
+public class DeleteProizvajalecServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public DeleteIzdelekServlet() {
+    public DeleteProizvajalecServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -38,7 +38,7 @@ public class DeleteIzdelekServlet extends HttpServlet {
 		if(request.getParameter("idItem")!=null) {
 			int id=Integer.parseInt(request.getParameter("idItem"));
 			DataManagerProxy dmp=new DataManagerProxy();
-			dmp.deleteIzdelek(id);
+			dmp.deleteProizvajalec(id);
 		}
 		
 		if(referer!=null) {

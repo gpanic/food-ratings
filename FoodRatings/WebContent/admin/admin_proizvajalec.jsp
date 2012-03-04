@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<%@page import="foodratings.client.Drzava"%>
 <%@page import="foodratings.client.Proizvajalec"%>
-<%@page import="foodratings.client.Kategorija"%>
 <%@page import="java.util.List"%>
 <%@page import="java.text.DecimalFormat"%>
 <%@page import="foodratings.util.FoodRatingsUtil"%>
-<%@page import="foodratings.client.Izdelek"%>
 <%@page import="foodratings.client.DataManagerProxy"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -23,16 +20,10 @@
 	}
 	
 	DataManagerProxy dmp=new DataManagerProxy();
-	Izdelek i=dmp.readIzdelek(id);
+	Proizvajalec i=dmp.readProizvajalec(id);
 	
 	double avgUporabniki=FoodRatingsUtil.getAverageRating(i.getOcene());
-	double avgProizvajalec=FoodRatingsUtil.getAverageRating(i.getProizvajalec().getOcene());
-	double avgDrzave=FoodRatingsUtil.getAverageRating(i.getDrzavaIzvora().getOcene());
 	DecimalFormat df=new DecimalFormat("0.0");
-
-	List<Kategorija> klist=dmp.listKategorija().getKategorije();
-	List<Proizvajalec> plist=dmp.listProizvajalec().getProizvajalci();
-	List<Drzava> dlist=dmp.listDrzava().getDrzave();
 %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -52,7 +43,7 @@
 		<jsp:param value="selected" name="izdelki"/>
 	</jsp:include>
 	<div id="content">
-		<form name="updateIzdelekForm" action="/FoodRatings/UpdateIzdelekServlet" method="post">
+		<form name="updateIzdelekForm" action="/FoodRatings/UpdateProizvajalecServlet" method="post">
 			<input type="hidden" name="idItem" value="<%=i.getId() %>"/>
 			<div class="item_details">
 				<div class="rating">
@@ -72,63 +63,24 @@
 					<tr>
 						<td>
 							<div>
-								<p class="item_att">Kategorija</p>
-								<select name="kategorija" class="input_select">
-<%
-	for(Kategorija k:klist) {
-%>
-										<option value="<%=k.getId() %>" <%if(i.getKategorija().getId()==k.getId()){out.print("selected=\"selected\"");} %>><%=k.getNaziv() %></option>
-<%
-	}
-%>
-								</select>
+								<p class="item_att">Država</p>
+								<p class="item_att_value"><input type="text" class="input_text" name="drzava" value="<%=i.getDrzava() %>"/></p>
 							</div>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<div>
-								<p class="item_att">Proizvajalec</p>
-								<select name="proizvajalec" class="input_select">
-<%
-	for(Proizvajalec p:plist) {
-%>
-									<option value="<%=p.getId() %>" <%if(i.getProizvajalec().getId()==p.getId()){out.print("selected=\"selected\"");} %>><%=p.getNaziv()+" ("+p.getMesto()+", "+p.getDrzava()+")" %></option>
-<%
-	}
-%>
-								</select>
-							</div>
-						</td>
-						<td>
-							<div class="rating_small"><%=df.format(avgProizvajalec) %></div>
 						</td>
 					</tr>
 					<tr>
 						<td>
 							<div>
-								<p class="item_att">Drzava izvora</p>
-								<select name="drzava" class="input_select">
-<%
-	for(Drzava d:dlist) {
-%>
-										<option value="<%=d.getId() %>" <%if(i.getDrzavaIzvora().getId()==d.getId()){out.print("selected=\"selected\"");} %>><%=d.getIme() %></option>
-<%
-	}
-%>
-								</select>
+								<p class="item_att">Mesto</p>
+								<p class="item_att_value"><input type="text" class="input_text" name="mesto" value="<%=i.getMesto() %>"/></p>
 							</div>
-						</td>
-						<td>
-							<div class="rating_small"><%=df.format(avgDrzave) %></div>
 						</td>
 					</tr>
 				</table>
 			</div>
 			<div class="buttons">
 				<input type="submit" value="Posodobi" class="input_button"/>
-				<input type="button" value="Prekliči" class="input_button" onclick="location.href='/FoodRatings/admin/admin_izdelki.jsp'")"/>
+				<input type="button" value="Prekliči" class="input_button" onclick="location.href='/FoodRatings/admin/admin_proizvajalci.jsp'")"/>
 			</div>
 		</form>
 	</div>

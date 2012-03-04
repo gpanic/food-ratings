@@ -29,6 +29,62 @@
 		<servlet-name>UpdateIzdelekServlet</servlet-name>
 		<servlet-class>foodratings.servlet.izdelek.UpdateIzdelekServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>DeleteProizvajalecServlet</display-name>
+		<servlet-name>DeleteProizvajalecServlet</servlet-name>
+		<servlet-class>foodratings.servlet.proizvajalec.DeleteProizvajalecServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>UpdateProizvajalecServlet</display-name>
+		<servlet-name>UpdateProizvajalecServlet</servlet-name>
+		<servlet-class>foodratings.servlet.proizvajalec.UpdateProizvajalecServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>DeleteKategorijaServlet</display-name>
+		<servlet-name>DeleteKategorijaServlet</servlet-name>
+		<servlet-class>foodratings.servlet.kategorija.DeleteKategorijaServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>UpdateKategorijaServlet</display-name>
+		<servlet-name>UpdateKategorijaServlet</servlet-name>
+		<servlet-class>foodratings.servlet.kategorija.UpdateKategorijaServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>DeleteDrzavaServlet</display-name>
+		<servlet-name>DeleteDrzavaServlet</servlet-name>
+		<servlet-class>foodratings.servlet.drzava.DeleteDrzavaServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>UpdateDrzavaServlet</display-name>
+		<servlet-name>UpdateDrzavaServlet</servlet-name>
+		<servlet-class>foodratings.servlet.drzava.UpdateDrzavaServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>DeleteUporabnikServlet</display-name>
+		<servlet-name>DeleteUporabnikServlet</servlet-name>
+		<servlet-class>foodratings.servlet.uporabnik.DeleteUporabnikServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>UpdateUporabnikServlet</display-name>
+		<servlet-name>UpdateUporabnikServlet</servlet-name>
+		<servlet-class>foodratings.servlet.uporabnik.UpdateUporabnikServlet</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>SignInServlet</servlet-name>
 		<url-pattern>
@@ -48,6 +104,46 @@
 		<servlet-name>UpdateIzdelekServlet</servlet-name>
 		<url-pattern>
 		/UpdateIzdelekServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteProizvajalecServlet</servlet-name>
+		<url-pattern>
+		/DeleteProizvajalecServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateProizvajalecServlet</servlet-name>
+		<url-pattern>
+		/UpdateProizvajalecServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteKategorijaServlet</servlet-name>
+		<url-pattern>
+		/DeleteKategorijaServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateKategorijaServlet</servlet-name>
+		<url-pattern>
+		/UpdateKategorijaServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteDrzavaServlet</servlet-name>
+		<url-pattern>
+		/DeleteDrzavaServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateDrzavaServlet</servlet-name>
+		<url-pattern>
+		/UpdateDrzavaServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteUporabnikServlet</servlet-name>
+		<url-pattern>
+		/DeleteUporabnikServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateUporabnikServlet</servlet-name>
+		<url-pattern>
+		/UpdateUporabnikServlet</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>

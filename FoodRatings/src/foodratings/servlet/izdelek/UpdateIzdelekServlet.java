@@ -35,7 +35,7 @@ public class UpdateIzdelekServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		int id=Integer.parseInt(request.getParameter("izdelekId"));
+		int id=Integer.parseInt(request.getParameter("idItem"));
 		String naziv=request.getParameter("naziv");
 		int idKat=Integer.parseInt(request.getParameter("kategorija"));
 		int idPro=Integer.parseInt(request.getParameter("proizvajalec"));

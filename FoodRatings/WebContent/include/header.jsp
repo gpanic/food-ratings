@@ -1,5 +1,5 @@
-<%@page import="foodratings.client.uporabnik.Uporabnik"%>
-<%@page import="foodratings.client.uporabnik.ManageUporabnikProxy"%>
+<%@page import="foodratings.client.Uporabnik"%>
+<%@page import="foodratings.client.DataManagerProxy"%>
 <script type="text/javascript">
 var show=false;
 $(document).click(function(e) {
@@ -41,8 +41,8 @@ $(document).click(function(e) {
 <%
 	if(session.getAttribute("userId")!=null) {
 		int id=(Integer)session.getAttribute("userId");
-		ManageUporabnikProxy mpu=new ManageUporabnikProxy();
-		Uporabnik user=mpu.readUporabnik(id);
+		DataManagerProxy dmp=new DataManagerProxy();
+		Uporabnik user=dmp.readUporabnik(id);
 %>
 			<li><a id="userTab"><%=user.getUsername() %></a></li>
 <%

@@ -19,10 +19,10 @@
 </head>
 <body>
 <form method="post" action="/FoodRatings/admin/admin_izdelek.jsp" name="selectListItemForm" id="selectListItemForm">
-	<input type="hidden" id="idIzdelek" name="idIzdelek" value=""/>
+	<input type="hidden" id="idItem" name="idItem" value=""/>
 </form>
 <form method="post" action="/FoodRatings/DeleteIzdelekServlet" name="deleteListItemForm" id="deleteListItemForm">
-	<input type="hidden" id="idIzdelek" name="idIzdelek" value=""/>
+	<input type="hidden" id="idItem" name="idItem" value=""/>
 </form>
 <div id="body_container">
 	<jsp:include page="/include/header.jsp" />
@@ -35,16 +35,20 @@
 	</jsp:include>
 	<div id="content">
 		<h1>Pregled izdelkov</h1>
+		<table class="list_item_admin_table">
 <%
 	for(Izdelek i:list) {
-		out.println("<div class=\"list_item_admin\" onClick=\"selectListItem("+i.getId()+")\">"
+		out.println("<tr>"
+				+"<td><div class=\"list_item_admin\" onClick=\"selectListItem("+i.getId()+")\">"
 				+"<h1>"+i.getNaziv()+"</h1>"
 				+"<h2>Kategorija: "+i.getKategorija().getNaziv()+"</h2>"
 				+"<h2>Proizvajalec: "+i.getProizvajalec().getNaziv()+"</h2>"
-				+"</div>"
-				+"<div class=\"delete_item\" onClick=\"deleteListItem("+i.getId()+")\">"+"X</div>");
+				+"</div></td>"
+				+"<td><div class=\"delete_item\" onClick=\"deleteListItem("+i.getId()+")\">"+"X</div></td>"
+				+"</tr>");
 	}
 %>
+		</table>
 	</div>
 	<div class="push"></div>
 </div>

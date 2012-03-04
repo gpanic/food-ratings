@@ -5,4 +5,9 @@
 		<password>g</password>
 		<role>admin</role>
 	</uporabnik>
+	<uporabnik id="1">
+		<username>nekiuser</username>
+		<password>n</password>
+		<role>user</role>
+	</uporabnik>
 </uporabniki>

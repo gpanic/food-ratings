@@ -8,4 +8,12 @@
 			<ocena idUser="0">8</ocena>
 		</ocene>
 	</proizvajalec>
+	<proizvajalec id="1">
+		<naziv>Zito</naziv>
+		<drzava>Slovenija</drzava>
+		<mesto>Ljubljana</mesto>
+		<ocene>
+			<ocena idUser="0">7</ocena>
+		</ocene>
+	</proizvajalec>
 </proizvajalci>

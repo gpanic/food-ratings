@@ -15,7 +15,7 @@
 </head>
 <body>
 <form method="post" action="/FoodRatings/izdelek.jsp" name="selectListItemForm" id="selectListItemForm">
-	<input type="hidden" id="idIzdelek" name="idIzdelek" value=""/>
+	<input type="hidden" id="idItem" name="idItem" value=""/>
 </form>
 <div id="body_container">
 	<jsp:include page="/include/header.jsp" />

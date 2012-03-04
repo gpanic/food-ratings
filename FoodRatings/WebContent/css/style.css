@@ -456,6 +456,16 @@ a.transition:hover
 	border-radius: 4px;
 }
 
+.list_item_admin
+{
+	width:94%;
+}
+
+.list_item_admin_table
+{
+	width:100%;
+}
+
 .list_item
 {
 	margin-right:0px;
@@ -489,12 +499,10 @@ a.transition:hover
 {
 	font-size:18px;
 	font-weight:bolder;
-	float:right;
-	position:relative;
-	top:-54px;
-	right:5px;
 	color:#8c8c8c;
 	cursor:pointer;
+	margin:0px;
+	padding:0px;
 }
 
 #content div.delete_item:hover
