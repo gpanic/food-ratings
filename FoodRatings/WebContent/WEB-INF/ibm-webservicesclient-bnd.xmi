@@ -15,4 +15,7 @@
   <serviceRefs xmi:id="ServiceRef_1330368208207" serviceRefLink="service/ManageUporabnikExport1_ManageUporabnikHttpService">
     <portQnameBindings xmi:id="PortQnameBinding_1330368208207" portQnameNamespaceLink="http://KISFoodLib/ManageUporabnik" portQnameLocalNameLink="ManageUporabnikExport1_ManageUporabnikHttpPort" overriddenEndpointURI="http://localhost:9080/KISFoodWeb/sca/ManageUporabnikExport1"/>
   </serviceRefs>
+  <serviceRefs xmi:id="ServiceRef_1330784129940" serviceRefLink="service/DataManagerExport1_DataManagerHttpService">
+    <portQnameBindings xmi:id="PortQnameBinding_1330784129940" portQnameNamespaceLink="http://KISFoodLib/DataManager" portQnameLocalNameLink="DataManagerExport1_DataManagerHttpPort" overriddenEndpointURI="http://localhost:9080/KISFoodWeb/sca/DataManagerExport1"/>
+  </serviceRefs>
 </com.ibm.etools.webservice.wscbnd:ClientBinding>

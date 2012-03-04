@@ -9,4 +9,14 @@
 			<ocena idUser="0">6</ocena>
 		</ocene>
 	</izdelek>
+	<izdelek id="1">
+		<naziv>Jogurt</naziv>
+		<kategorija id="0"/>
+		<proizvajalec id="0"/>
+		<drzavaIzvora id="0"/>
+		<ocene>
+			<ocena idUser="0">8</ocena>
+			<ocena idUser="0">6</ocena>
+		</ocene>
+	</izdelek>
 </izdelki>

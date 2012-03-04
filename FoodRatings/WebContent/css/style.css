@@ -15,19 +15,19 @@ body
 	color:#3d3d3d;
 }
 
-div#header_container
+#header_container
 {
 	background-color:#e3e3e3;
 }
 
-div#header
+#header
 {
 	width:800px;
 	height:50px;
 	margin:0px auto 0px auto;
 }
 
-div#website_title
+#website_title
 {
 	color:#3d3d3d;
 	display:inline;
@@ -38,7 +38,7 @@ div#website_title
 	font-size:26px;
 }
 
-div#website_title span#highlight
+#website_title span#highlight
 {
 	color:#e3e3e3;
 	background-color:#3d3d3d;
@@ -46,7 +46,7 @@ div#website_title span#highlight
 	padding:0px 6px 2px 6px;
 }
 
-div#header a
+#header a
 {
 	color:#3d3d3d;
 	display:block;
@@ -54,24 +54,24 @@ div#header a
 	margin:0px 0px 0px 0px;
 }
 
-div#header a:link
+#header a:link
 {
 	color:#3d3d3d;
 	text-decoration:none;	
 }
 
-div#header a:visited
+#header a:visited
 {
 	color:#3d3d3d;
 }
 
-div#header a:hover
+#header a:hover
 {
 	background-color:#3d3d3d;
 	color:#e3e3e3;
 }
 
-div#header ul
+#header ul
 {
 	display:inline;
 	float:left;
@@ -79,7 +79,7 @@ div#header ul
 	padding:0px;
 }
 
-div#header li
+#header ul li
 {
 	display:inline;
 	font-size:13px;
@@ -88,21 +88,15 @@ div#header li
 	border-left:1px solid #bfbfbf;
 }
 
-div#header ul#menuitems_right
+#header ul#menuitems_right
 {
-	display:inline;
 	float:right;
-	margin:0px;
-	padding:0px;
 }
 
-div#header ul#menuitems_right li
+#header ul#menuitems_right li
 {
-	display:inline;
-	font-size:13px;
-	height:50px;
 	float:right;
-	border:none;;
+	border:none;
 }
 
 #content_header_container
@@ -281,7 +275,7 @@ div#header ul#menuitems_right li
 	z-index:5;
 }
 
-#admin_menu .selected
+#admin_menu a.selected
 {
 	background-color:white;
 	color:#3d3d3d;
@@ -290,8 +284,13 @@ div#header ul#menuitems_right li
 	box-shadow: 0px -6px 0px 0px #fff, 0px 0px 6px 0px #888;
 	position:relative;
 	z-index:20;
-	pointer-events:none;
-  	cursor:default;
+  	cursor:pointer;
+}
+
+#admin_menu a:hover
+{
+	background-color:white;
+	color:#3d3d3d;
 }
 
 .block
@@ -329,8 +328,8 @@ div#header ul#menuitems_right li
 	padding:2px 5px;
 	background-color:white;
 	border:1px solid #b4b4b4;
-	-moz-border-radius: 5px; 
-	-webkit-border-radius: 5px;
+	-moz-border-radius: 4px; 
+	-webkit-border-radius: 4px;
 	border-radius: 4px;
 }
 
@@ -352,8 +351,8 @@ div#header ul#menuitems_right li
 	background-color:#656565;
 	color:white;
 	border:none;
-	-moz-border-radius: 5px; 
-	-webkit-border-radius: 5px;
+	-moz-border-radius: 4px; 
+	-webkit-border-radius: 4px;
 	border-radius: 4px;
 	margin:5px 0px;
 	border:1px solid #4d4d4d;
@@ -368,20 +367,21 @@ div#header ul#menuitems_right li
 	border:1px solid #3d3d3d;
 }
 
-a
+a.transition
 {
+	font-weight:bold;
 	text-decoration:none;
-	color:#4c88bf;
+	color:#3d3d3d;
 	transition: color 200ms ease-in;
 	-webkit-transition: color 200ms ease-in;
 	-moz-transition: color 200ms ease-in;
 	-o-transition: color 200ms ease-in;
 }
 
-a:hover
+a.transition:hover
 {
-	text-decoration:none;
-	color:#38648c;
+	text-decoration:underline;
+	color:#1c62b9;
 }
 
 .errorMessage span
@@ -396,6 +396,238 @@ a:hover
 
 .center
 {
-	text-align:center;	
+	text-align:center;
 }
 
+#userMenu_container
+{
+	display:block;
+	position:absolute;
+	top:50px;
+	left:50%;
+	z-index:50;
+}
+
+#userMenu
+{
+	visibility:hidden;
+	font-size:14px;
+	list-style:none;
+	background-color:#3d3d3d;
+	margin:0px 0px 0px 280px;
+	padding:5px 10px;
+	width:100px;
+}
+
+#userMenu li
+{
+	margin:5px 0px;
+	padding:0px;
+}
+
+#userMenu a
+{
+	text-decoration:none;
+	color:white;
+	margin:0px;
+	padding:0px;
+}
+
+#userMenu a:visited
+{
+	text-decoration:none;
+	color:white;
+}
+
+#userTab
+{
+	position:relative;
+	z-index:9;
+	cursor:pointer;
+}
+
+.list_item_admin, .list_item
+{
+	margin:15px 30px 15px 0px;
+	padding:7px 15px 9px 15px;
+	background-color:#f0f0f0;
+	-moz-border-radius: 4px; 
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.list_item
+{
+	margin-right:0px;
+}
+
+.list_item_admin:hover, .list_item:hover
+{
+	background-color:white;
+	-moz-box-shadow: 0px 0px 6px 0px #888;
+	-webkit-box-shadow: 0px 0px 6px 0px #888;
+	box-shadow: 0px 0px 6px 0px #888;
+	cursor:pointer;
+}
+
+#content div.list_item_admin h1, #content div.list_item h1
+{
+	margin:0px;
+	padding:0px;
+	font-size:14px;	
+}
+
+#content div.list_item_admin h2, #content div.list_item h2
+{
+	margin:0px;
+	padding:0px;
+	font-size:12px;
+	font-weight:normal;
+}
+
+#content div.delete_item
+{
+	font-size:18px;
+	font-weight:bolder;
+	float:right;
+	position:relative;
+	top:-54px;
+	right:5px;
+	color:#8c8c8c;
+	cursor:pointer;
+}
+
+#content div.delete_item:hover
+{
+	color:#3d3d3d;
+}
+
+#content .item_details
+{
+	margin:15px 0px;
+	padding:7px 15px 9px 15px;
+	background-color:#f0f0f0;
+	-moz-border-radius: 4px; 
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+#content .item_details h1
+{
+	margin:0px 0px 5px 0px;
+	padding:0px;	
+}
+
+#content .item_details div
+{
+	margin:5px 0px;
+}
+
+#content .item_details p.item_att
+{
+	font-weight:bold;
+	margin:0px 0px 2px 0px;
+	padding:0px;	
+}
+
+#content .item_details p.item_att_value
+{
+	margin:0px 0px 0px 0px;
+	padding:0px;	
+}
+
+#content .item_details p.item_att_textfield, #content .item_details select.input_select
+{
+	margin:8px 0px 0px 0px;
+	padding:0px;	
+}
+
+#content .item_details div.rating div
+{
+	background-color:white;
+	font-weight:bolder;
+	font-size:40px;
+	padding:15px;
+	display:inline-block;
+	float:right;
+	position:relative;
+	top:50px;
+	right:-65px;
+	-moz-border-radius: 4px; 
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	-moz-box-shadow: 0px 0px 6px 0px #888;
+	-webkit-box-shadow: 0px 0px 6px 0px #888;
+	box-shadow: 0px 0px 6px 0px #888;
+}
+
+#content .item_details div.rating span
+{
+	font-size:12px;
+	font-weight:bold;
+	float:right;
+	position:relative;
+	top:30px;
+	right:50px;
+}
+
+#content .item_details table
+{
+	margin:0px;
+	padding:0px;
+}
+
+#content .item_details table tr
+{
+	margin:0px;
+	padding:0px;
+}
+
+#content .item_details table td
+{
+	margin:0px;
+	padding:0px;
+}
+
+#content .item_details div.rating_small
+{
+	background-color:white;
+	font-weight:bolder;
+	font-size:18px;
+	display:inline-block;
+	-moz-border-radius: 4px; 
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	-moz-box-shadow: 0px 0px 6px 0px #888;
+	-webkit-box-shadow: 0px 0px 6px 0px #888;
+	box-shadow: 0px 0px 6px 0px #888;
+	padding:5px;
+	margin:0px 15px;
+}
+
+.input_select
+{
+	-webkit-appearance: none;
+	outline:none;
+	height:32px;
+	width:212px;
+	padding:5px 5px;
+	border:1px solid #b4b4b4;
+	-moz-border-radius: 4px; 
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	background: url('/FoodRatings/img/select_icon.png') no-repeat right white;
+	background-position:187px 7px;
+	overflow:hidden;
+}
+
+.buttons
+{
+	margin:20px 10px;
+	padding:0px;	
+}
+
+.buttons input
+{
+	margin:0px 10px 0px 0px;	
+}

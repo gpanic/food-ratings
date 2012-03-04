@@ -7,10 +7,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.ibm.icu.impl.UBiDiProps;
-
-import foodratings.client.uporabnik.ManageUporabnikProxy;
-import foodratings.client.uporabnik.Uporabnik;
+import foodratings.client.DataManagerProxy;
+import foodratings.client.Uporabnik;
 
 /**
  * Servlet implementation class SignInServlet
@@ -46,8 +44,8 @@ public class SignInServlet extends HttpServlet {
 		u.setUsername(username);
 		u.setPassword(password);
 		
-		ManageUporabnikProxy mpu=new ManageUporabnikProxy();
-		Uporabnik uFull=mpu.loginUporabnik(u);
+		DataManagerProxy dmp=new DataManagerProxy();
+		Uporabnik uFull=dmp.loginUporabnik(u);
 		if(uFull!=null) {
 			session.setAttribute("userId", uFull.getId());
 			response.sendRedirect("/FoodRatings");

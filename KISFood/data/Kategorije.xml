@@ -3,4 +3,7 @@
 	<kategorija id="0">
 		<naziv>Sadje</naziv>
 	</kategorija>
+	<kategorija id="1">
+		<naziv>Meso</naziv>
+	</kategorija>
 </kategorije>

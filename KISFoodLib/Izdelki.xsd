@@ -2,9 +2,10 @@
 <xsd:schema targetNamespace="http://KISFoodLib"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	xmlns:Q1="http://KISFoodLib">
+	<xsd:include schemaLocation="Izdelek.xsd"></xsd:include>
 	<xsd:complexType name="Izdelki">
 		<xsd:sequence>
-			<xsd:element minOccurs="0" name="izdelki" type="Q1:Izdelki"
+			<xsd:element minOccurs="0" name="izdelki" type="Q1:Izdelek"
 				maxOccurs="unbounded">
 			</xsd:element>
 		</xsd:sequence>

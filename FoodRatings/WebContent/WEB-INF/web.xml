@@ -8,10 +8,46 @@
 		<servlet-name>SignInServlet</servlet-name>
 		<servlet-class>foodratings.servlet.SignInServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>SignOutServlet</display-name>
+		<servlet-name>SignOutServlet</servlet-name>
+		<servlet-class>foodratings.servlet.SignOutServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>DeleteIzdelekServlet</display-name>
+		<servlet-name>DeleteIzdelekServlet</servlet-name>
+		<servlet-class>foodratings.servlet.izdelek.DeleteIzdelekServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>UpdateIzdelekServlet</display-name>
+		<servlet-name>UpdateIzdelekServlet</servlet-name>
+		<servlet-class>foodratings.servlet.izdelek.UpdateIzdelekServlet</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>SignInServlet</servlet-name>
 		<url-pattern>
 		/SignInServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SignOutServlet</servlet-name>
+		<url-pattern>
+		/SignOutServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteIzdelekServlet</servlet-name>
+		<url-pattern>
+		/DeleteIzdelekServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateIzdelekServlet</servlet-name>
+		<url-pattern>
+		/UpdateIzdelekServlet</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>

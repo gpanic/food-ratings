@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<scdl:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://www.ibm.com/xmlns/prod/websphere/scdl/java/6.0.0" xmlns:ns1="http://KISFoodLib/ManageDrzava" xmlns:ns2="http://KISFoodLib/ManageIzdelek" xmlns:ns3="http://KISFoodLib/ManageKategorija" xmlns:ns4="http://KISFoodLib/ManageProizvajalec" xmlns:ns5="http://KISFoodLib/ManageUporabnik" xmlns:scdl="http://www.ibm.com/xmlns/prod/websphere/scdl/6.0.0" xmlns:wsdl="http://www.ibm.com/xmlns/prod/websphere/scdl/wsdl/6.0.0" displayName="DataManager" name="DataManager">
+<scdl:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://www.ibm.com/xmlns/prod/websphere/scdl/java/6.0.0" xmlns:ns1="http://KISFoodLib/ManageDrzava" xmlns:ns2="http://KISFoodLib/ManageIzdelek" xmlns:ns3="http://KISFoodLib/ManageKategorija" xmlns:ns4="http://KISFoodLib/ManageProizvajalec" xmlns:ns5="http://KISFoodLib/ManageUporabnik" xmlns:ns6="http://KISFoodLib/DataManager" xmlns:scdl="http://www.ibm.com/xmlns/prod/websphere/scdl/6.0.0" xmlns:wsdl="http://www.ibm.com/xmlns/prod/websphere/scdl/wsdl/6.0.0" displayName="DataManager" name="DataManager">
   <interfaces>
-    <interface xsi:type="wsdl:WSDLPortType" preferredInteractionStyle="sync" portType="ns1:ManageDrzava">
-      <scdl:interfaceQualifier xsi:type="scdl:JoinTransaction" value="true"/>
-    </interface>
-    <interface xsi:type="wsdl:WSDLPortType" preferredInteractionStyle="sync" portType="ns2:ManageIzdelek">
-      <scdl:interfaceQualifier xsi:type="scdl:JoinTransaction" value="true"/>
-    </interface>
-    <interface xsi:type="wsdl:WSDLPortType" preferredInteractionStyle="sync" portType="ns3:ManageKategorija">
-      <scdl:interfaceQualifier xsi:type="scdl:JoinTransaction" value="true"/>
-    </interface>
-    <interface xsi:type="wsdl:WSDLPortType" preferredInteractionStyle="sync" portType="ns4:ManageProizvajalec">
-      <scdl:interfaceQualifier xsi:type="scdl:JoinTransaction" value="true"/>
-    </interface>
-    <interface xsi:type="wsdl:WSDLPortType" preferredInteractionStyle="sync" portType="ns5:ManageUporabnik">
+    <interface xsi:type="wsdl:WSDLPortType" preferredInteractionStyle="sync" portType="ns6:DataManager">
       <scdl:interfaceQualifier xsi:type="scdl:JoinTransaction" value="true"/>
     </interface>
   </interfaces>
