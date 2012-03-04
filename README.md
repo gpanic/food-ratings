@@ -1,0 +1,4 @@
+Food Ratings
+============
+
+Ideja je spletna aplikacija, ki ocenjuje kvaliteto prehrambenih izdelkov na podlagi veèih parametrov, ki jih uporabniki vnašajo. Za oceno kvalitete se uporabi presoja uporabnikov in zunanje storitve. Vse ocene se beležijo v podatkovni bazi, kar omogoèa statistiène analize in pregled ocen izdelkov. Vsi izdelki so uvršèeni v doloèene kategorije in podkategorije. Aplikacija omogoèa tudi urejanje vseh obstojeèih izdelkov. Uporabniški vmesnik je v obliki spletne strani, ki komunicira z aplikacijskim strežnikom, ta pa podatke èrpa iz podatkovne baze. Arhitektura je v slogu SOA-e, kar pomeni, da so funkcionalnosti izpostavljene v obliki spletnih storitev, ki jih uporabniški vmesnik klièe.
