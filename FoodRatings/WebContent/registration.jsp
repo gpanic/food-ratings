@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<%@page import="foodratings.client.DataManagerProxy"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -7,17 +8,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" type="text/css" href="/FoodRatings/css/style.css" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-<title>Food Ratings - Prijava</title>
+<title>Food Ratings - Registracija</title>
 </head>
 <body>
 <div id="body_container">
 	<jsp:include page="/include/header.jsp" />
 	<jsp:include page="/include/content_header.jsp" >
-		<jsp:param value="Prijava" name="title"/>
-		<jsp:param value="Prijavite se s svojim uporabniskim imenom in geslo, ali pa si ustvarite nov racun." name="subtitle"/>
+		<jsp:param value="Registracija" name="title"/>
+		<jsp:param value="Ustvarite si nov racun." name="subtitle"/>
 	</jsp:include>
 	<div id="content">
-		<form action="/FoodRatings/SignInServlet" method="post">
+		<form action="/FoodRatings/RegistrationServlet" method="post">
 			<div class="inputForm">
 				<div class="inputFields">
 					<div>
@@ -28,28 +29,33 @@
 						<label for="password" class="block">Geslo</label>
 						<input type="password" id="password" name="password" class="input_text"/>
 					</div>
+					<div>
+						<label for="password" class="block">Ponovitev gesla</label>
+						<input type="password" id="password2" name="password2" class="input_text"/>
+					</div>
 				</div>
 				<div class="inputButtons">
-					<input type="submit" value="Prijava" class="input_button"/><span><a href="/FoodRatings/registration.jsp" class="transition">Registracija</a></span>
+					<input type="submit" value="Registriraj" class="input_button"/>
+					<input type="button" value="Pobriši" class="input_button" onclick="this.form.reset()"/>
 				</div>
 			</div>
 		</form>
 <%
-	if(session.getAttribute("login")!=null) {
-		session.removeAttribute("login");
+	if(session.getAttribute("fields")!=null) {
+		session.removeAttribute("fields");
 %>
 		<jsp:include page="/include/message_error.jsp">
-			<jsp:param value="Napacno uporabnisko ime ali geslo." name="errorMessage"/>
+			<jsp:param value="Izpolnite vsa polja." name="errorMessage"/>
 		</jsp:include>
 <%
 	}
 
-	if(session.getAttribute("reg")!=null) {
-		session.removeAttribute("reg");
+	if(session.getAttribute("passMatch")!=null) {
+		session.removeAttribute("passMatch");
 %>
-	<jsp:include page="/include/message_info.jsp">
-			<jsp:param value="Registracija uspesna." name="message"/>
-	</jsp:include>
+		<jsp:include page="/include/message_error.jsp">
+			<jsp:param value="Gesli se ne ujemata." name="errorMessage"/>
+		</jsp:include>
 <%
 	}
 %>

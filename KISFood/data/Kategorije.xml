@@ -6,4 +6,7 @@
 	<kategorija id="1">
 		<naziv>Meso</naziv>
 	</kategorija>
+	<kategorija id="2">
+		<naziv>Testenine</naziv>
+	</kategorija>
 </kategorije>

@@ -16,4 +16,12 @@
 			<ocena idUser="0">7</ocena>
 		</ocene>
 	</proizvajalec>
+	<proizvajalec id="2">
+		<naziv>Barilla</naziv>
+		<drzava>Italija</drzava>
+		<mesto>Parma</mesto>
+		<ocene>
+			<ocena idUser="0">9</ocena>
+		</ocene>
+	</proizvajalec>
 </proizvajalci>

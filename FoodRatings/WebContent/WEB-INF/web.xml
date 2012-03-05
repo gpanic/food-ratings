@@ -85,6 +85,13 @@
 		<servlet-name>UpdateUporabnikServlet</servlet-name>
 		<servlet-class>foodratings.servlet.uporabnik.UpdateUporabnikServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>RegistrationServlet</display-name>
+		<servlet-name>RegistrationServlet</servlet-name>
+		<servlet-class>foodratings.servlet.RegistrationServlet</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>SignInServlet</servlet-name>
 		<url-pattern>
@@ -144,6 +151,11 @@
 		<servlet-name>UpdateUporabnikServlet</servlet-name>
 		<url-pattern>
 		/UpdateUporabnikServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RegistrationServlet</servlet-name>
+		<url-pattern>
+		/RegistrationServlet</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>

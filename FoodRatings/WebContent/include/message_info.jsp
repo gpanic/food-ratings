@@ -1,0 +1,1 @@
+<div class="infoMessage center"><span><%=request.getParameter("message") %></span></div>
