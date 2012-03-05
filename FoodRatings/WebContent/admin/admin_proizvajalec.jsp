@@ -40,7 +40,7 @@
 		<jsp:param value="Urejanje strani, podatkov in uporabnikov." name="subtitle"/>
 	</jsp:include>
 	<jsp:include page="/include/admin_menu.jsp" >
-		<jsp:param value="selected" name="izdelki"/>
+		<jsp:param value="selected" name="proizvajalci"/>
 	</jsp:include>
 	<div id="content">
 		<form name="updateIzdelekForm" action="/FoodRatings/UpdateProizvajalecServlet" method="post">
@@ -56,7 +56,7 @@
 						<td>
 							<div>
 								<p class="item_att">Naziv</p>
-								<p class="item_att_value"><input type="text" class="input_text" name="naziv" value="<%=i.getNaziv() %>"/></p>
+								<p class="item_att_textfield"><input type="text" class="input_text" name="naziv" value="<%=i.getNaziv() %>"/></p>
 							</div>
 						</td>
 					</tr>
@@ -64,7 +64,7 @@
 						<td>
 							<div>
 								<p class="item_att">Država</p>
-								<p class="item_att_value"><input type="text" class="input_text" name="drzava" value="<%=i.getDrzava() %>"/></p>
+								<p class="item_att_textfield"><input type="text" class="input_text" name="drzava" value="<%=i.getDrzava() %>"/></p>
 							</div>
 						</td>
 					</tr>
@@ -72,7 +72,7 @@
 						<td>
 							<div>
 								<p class="item_att">Mesto</p>
-								<p class="item_att_value"><input type="text" class="input_text" name="mesto" value="<%=i.getMesto() %>"/></p>
+								<p class="item_att_textfield"><input type="text" class="input_text" name="mesto" value="<%=i.getMesto() %>"/></p>
 							</div>
 						</td>
 					</tr>
@@ -80,7 +80,7 @@
 			</div>
 			<div class="buttons">
 				<input type="submit" value="Posodobi" class="input_button"/>
-				<input type="button" value="Prekliči" class="input_button" onclick="location.href='/FoodRatings/admin/admin_proizvajalci.jsp'")"/>
+				<input type="button" value="Prekliči" class="input_button" onclick="location.href='/FoodRatings/admin/admin_proizvajalci.jsp'"/>
 			</div>
 		</form>
 	</div>

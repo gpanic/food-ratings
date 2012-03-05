@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<%@page import="foodratings.client.Izdelek"%>
+<%@page import="foodratings.client.Drzava"%>
 <%@page import="java.util.List"%>
 <%@page import="foodratings.client.DataManagerProxy"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -11,28 +11,27 @@
 <link rel="stylesheet" type="text/css" href="/FoodRatings/css/style.css" />
 <script type="text/javascript" src="/FoodRatings/js/list.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-<title>Food Ratings - Izdelki</title>
+<title>Food Ratings - Države izvora</title>
 </head>
 <body>
-<form method="post" action="/FoodRatings/izdelek.jsp" name="selectListItemForm" id="selectListItemForm">
+<form method="post" action="/FoodRatings/drzava.jsp" name="selectListItemForm" id="selectListItemForm">
 	<input type="hidden" id="idItem" name="idItem" value=""/>
 </form>
 <div id="body_container">
 	<jsp:include page="/include/header.jsp" />
 	<jsp:include page="/include/content_header.jsp" >
-		<jsp:param value="Izdelki" name="title"/>
-		<jsp:param value="Vsi ocenjeni izdelki." name="subtitle"/>
+		<jsp:param value="Drzave izvora" name="title"/>
+		<jsp:param value="Vse ocenjene drzave izvora." name="subtitle"/>
 	</jsp:include>
 	<div id="content">
-		<h1>Pregled izdelkov</h1>
+		<h1>Pregled držav</h1>
 <%
 	DataManagerProxy dmp=new DataManagerProxy();
-	List<Izdelek> list=dmp.listIzdelek().getIzdelki();
-	for(Izdelek i:list) {
-		out.println("<div class=\"list_item\" onClick=\"selectListItem("+i.getId()+")\">"
-				+"<h1>"+i.getNaziv()+"</h1>"
-				+"<h2>Kategorija: "+i.getKategorija().getNaziv()+"</h2>"
-				+"<h2>Proizvajalec: "+i.getProizvajalec().getNaziv()+"</h2>"
+	List<Drzava> list=dmp.listDrzava().getDrzave();
+	for(Drzava d:list) {
+		out.println("<div class=\"list_item_admin\" onClick=\"selectListItem("+d.getId()+")\">"
+				+"<h1>"+d.getIme()+"</h1>"
+				+"<h2>Kratica: "+d.getKratica()+"</h2>"
 				+"</div>");
 	}
 	
@@ -40,7 +39,7 @@
 		session.removeAttribute("rated");
 %>
 		<jsp:include page="/include/message_info.jsp">
-			<jsp:param value="Ocenili ste izdelek." name="message"/>
+			<jsp:param value="Ocenili ste drzavo." name="message"/>
 		</jsp:include>
 <%
 	}

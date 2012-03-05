@@ -1,21 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<proizvajalci xmlns="http://www.example.org/Proizvajalci">
-	<proizvajalec id="0">
-		<naziv>Nestle</naziv>
-		<drzava>Svica</drzava>
-		<mesto>Vavey</mesto>
-		<ocene>
-			<ocena idUser="0">8</ocena>
-		</ocene>
-	</proizvajalec>
+<?xml version="1.0" encoding="UTF-8"?><proizvajalci xmlns="http://www.example.org/Proizvajalci">
 	<proizvajalec id="1">
 		<naziv>Zito</naziv>
 		<drzava>Slovenija</drzava>
 		<mesto>Ljubljana</mesto>
-		<ocene>
-			<ocena idUser="0">7</ocena>
-		</ocene>
-	</proizvajalec>
+		
+	
+<ocene>
+<ocena idUser="0">9</ocena>
+</ocene>
+</proizvajalec>
 	<proizvajalec id="2">
 		<naziv>Barilla</naziv>
 		<drzava>Italija</drzava>
@@ -24,4 +17,15 @@
 			<ocena idUser="0">9</ocena>
 		</ocene>
 	</proizvajalec>
+<proizvajalec id="3">
+<naziv>Nestle</naziv>
+<drzava>Svica</drzava>
+<mesto>Vavey</mesto>
+
+
+<ocene>
+<ocena idUser="0">8</ocena>
+</ocene>
+</proizvajalec>
+
 </proizvajalci>

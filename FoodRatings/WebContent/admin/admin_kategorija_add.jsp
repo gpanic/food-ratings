@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<%@page import="foodratings.client.Kategorija"%>
-<%@page import="java.util.List"%>
-<%@page import="foodratings.client.DataManagerProxy"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<%
-	int id=-1;
-	if(request.getParameter("idItem")!=null) {
-		id=Integer.parseInt(request.getParameter("idItem"));
-	} else {
-		if(request.getHeader("Referer")!=null) {
-	response.sendRedirect(request.getHeader("Referer"));
-		} else {
-	response.sendRedirect("/FoodRatings");
-		}
-	}
-	
-	DataManagerProxy dmp=new DataManagerProxy();
-	Kategorija k=dmp.readKategorija(id);
-%>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -38,26 +20,30 @@
 		<jsp:param value="selected" name="kategorije"/>
 	</jsp:include>
 	<div id="content">
-		<form name="updateIzdelekForm" action="/FoodRatings/UpdateKategorijaServlet" method="post">
-			<input type="hidden" name="idItem" value="<%=k.getId() %>"/>
+		<form action="/FoodRatings/AddKategorijaServlet" method="post">
 			<div class="item_details">
-				<h1><%=k.getNaziv() %></h1>
-				<table>
-					<tr>
-						<td>
-							<div>
-								<p class="item_att">Naziv</p>
-								<p class="item_att_textfield"><input type="text" class="input_text" name="naziv" value="<%=k.getNaziv() %>"/></p>
-							</div>
-						</td>
-					</tr>
-				</table>
+				<h1>Dodaj kategorijo</h1>
+				<div>
+					<p class="item_att">Naziv</p>
+					<p class="item_att_textfield"><input type="text" class="input_text" name="naziv"/></p>
+				</div>
 			</div>
 			<div class="buttons">
-				<input type="submit" value="Posodobi" class="input_button"/>
-				<input type="button" value="Prekliči" class="input_button" onclick="location.href='/FoodRatings/admin/admin_kategorije.jsp'"/>
+				<input type="submit" value="Dodaj" class="input_button"/>
+				<input type="button" value="Pobriši" class="input_button" onclick="this.form.reset()")"/>
+				<input type="button" value="Prekliči" class="input_button" onclick="location.href='/FoodRatings/admin/admin_kategorije.jsp'")"/>
 			</div>
 		</form>
+<%
+	if(session.getAttribute("fields")!=null) {
+		session.removeAttribute("fields");
+%>
+		<jsp:include page="/include/message_error.jsp">
+			<jsp:param value="Izpolnite vsa polja." name="errorMessage"/>
+		</jsp:include>
+<%
+	}
+%>
 	</div>
 	<div class="push"></div>
 </div>

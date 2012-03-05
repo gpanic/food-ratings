@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<uporabniki xmlns="http://www.example.org/Uporabniki">
+<?xml version="1.0" encoding="UTF-8"?><uporabniki xmlns="http://www.example.org/Uporabniki">
 	<uporabnik id="0">
 		<username>gregor</username>
 		<password>g</password>
@@ -10,4 +9,9 @@
 		<password>n</password>
 		<role>user</role>
 	</uporabnik>
+<uporabnik id="2">
+<username>test</username>
+<password>t</password>
+<role>user</role>
+</uporabnik>
 </uporabniki>

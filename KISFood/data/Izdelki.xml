@@ -1,32 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<izdelki xmlns="http://www.example.org/Izdelki">
-	<izdelek id="0">
-		<naziv>Jabolko</naziv>
-		<kategorija id="0"/>
-		<proizvajalec id="0"/>
-		<drzavaIzvora id="0"/>
-		<ocene>
-			<ocena idUser="0">6</ocena>
-		</ocene>
-	</izdelek>
-	<izdelek id="1">
-		<naziv>Jogurt</naziv>
-		<kategorija id="0"/>
-		<proizvajalec id="0"/>
-		<drzavaIzvora id="0"/>
-		<ocene>
-			<ocena idUser="0">8</ocena>
-			<ocena idUser="0">6</ocena>
-		</ocene>
-	</izdelek>
-	<izdelek id="1">
-		<naziv>Špageti</naziv>
-		<kategorija id="2"/>
-		<proizvajalec id="0"/>
-		<drzavaIzvora id="0"/>
-		<ocene>
-			<ocena idUser="0">8</ocena>
-			<ocena idUser="0">6</ocena>
-		</ocene>
-	</izdelek>
+<?xml version="1.0" encoding="UTF-8"?><izdelki xmlns="http://www.example.org/Proizvajalci">
+<izdelek id="0">
+<naziv>Jabolko</naziv>
+<kategorija id="0"/>
+<proizvajalec id="3"/>
+<drzavaIzvora id="0"/>
+
+<ocene>
+<ocena idUser="0">5</ocena>
+</ocene>
+</izdelek>
+<izdelek id="1">
+<naziv>Špageti</naziv>
+<kategorija id="2"/>
+<proizvajalec id="1"/>
+<drzavaIzvora id="1"/>
+<ocene/>
+</izdelek>
+
+
 </izdelki>

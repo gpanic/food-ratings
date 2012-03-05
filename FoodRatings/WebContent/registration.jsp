@@ -30,7 +30,7 @@
 						<input type="password" id="password" name="password" class="input_text"/>
 					</div>
 					<div>
-						<label for="password" class="block">Ponovitev gesla</label>
+						<label for="password2" class="block">Ponovitev gesla</label>
 						<input type="password" id="password2" name="password2" class="input_text"/>
 					</div>
 				</div>

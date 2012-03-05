@@ -92,6 +92,55 @@
 		<servlet-name>RegistrationServlet</servlet-name>
 		<servlet-class>foodratings.servlet.RegistrationServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>RateIzdelekServlet</display-name>
+		<servlet-name>RateIzdelekServlet</servlet-name>
+		<servlet-class>foodratings.servlet.izdelek.RateIzdelekServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>AddIzdelekServlet</display-name>
+		<servlet-name>AddIzdelekServlet</servlet-name>
+		<servlet-class>foodratings.servlet.izdelek.AddIzdelekServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>AddProizvajalecServlet</display-name>
+		<servlet-name>AddProizvajalecServlet</servlet-name>
+		<servlet-class>foodratings.servlet.proizvajalec.AddProizvajalecServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>AddDrzavaServlet</display-name>
+		<servlet-name>AddDrzavaServlet</servlet-name>
+		<servlet-class>foodratings.servlet.drzava.AddDrzavaServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>AddKategorijaServlet</display-name>
+		<servlet-name>AddKategorijaServlet</servlet-name>
+		<servlet-class>foodratings.servlet.kategorija.AddKategorijaServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>RateProizvajalecServlet</display-name>
+		<servlet-name>RateProizvajalecServlet</servlet-name>
+		<servlet-class>foodratings.servlet.proizvajalec.RateProizvajalecServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>RateDrzavaServlet</display-name>
+		<servlet-name>RateDrzavaServlet</servlet-name>
+		<servlet-class>foodratings.servlet.drzava.RateDrzavaServlet</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>SignInServlet</servlet-name>
 		<url-pattern>
@@ -156,6 +205,41 @@
 		<servlet-name>RegistrationServlet</servlet-name>
 		<url-pattern>
 		/RegistrationServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RateIzdelekServlet</servlet-name>
+		<url-pattern>
+		/RateIzdelekServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AddIzdelekServlet</servlet-name>
+		<url-pattern>
+		/AddIzdelekServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AddProizvajalecServlet</servlet-name>
+		<url-pattern>
+		/AddProizvajalecServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AddDrzavaServlet</servlet-name>
+		<url-pattern>
+		/AddDrzavaServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AddKategorijaServlet</servlet-name>
+		<url-pattern>
+		/AddKategorijaServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RateProizvajalecServlet</servlet-name>
+		<url-pattern>
+		/RateProizvajalecServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RateDrzavaServlet</servlet-name>
+		<url-pattern>
+		/RateDrzavaServlet</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>

@@ -65,7 +65,7 @@
 						<td>
 							<div>
 								<p class="item_att">Naziv</p>
-								<p class="item_att_value"><input type="text" class="input_text" name="naziv" value="<%=i.getNaziv() %>"/></p>
+								<p class="item_att_textfield"><input type="text" class="input_text" name="naziv" value="<%=i.getNaziv() %>"/></p>
 							</div>
 						</td>
 					</tr>
@@ -128,7 +128,7 @@
 			</div>
 			<div class="buttons">
 				<input type="submit" value="Posodobi" class="input_button"/>
-				<input type="button" value="Prekliči" class="input_button" onclick="location.href='/FoodRatings/admin/admin_izdelki.jsp'")"/>
+				<input type="button" value="Prekliči" class="input_button" onclick="location.href='/FoodRatings/admin/admin_izdelki.jsp'"/>
 			</div>
 		</form>
 	</div>

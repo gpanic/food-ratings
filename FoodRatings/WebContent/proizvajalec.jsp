@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<%@page import="foodratings.client.Proizvajalec"%>
 <%@page import="foodratings.client.Ocena"%>
 <%@page import="java.util.List"%>
 <%@page import="java.text.DecimalFormat"%>
@@ -21,11 +22,9 @@
 	}
 	
 	DataManagerProxy dmp=new DataManagerProxy();
-	Izdelek i=dmp.readIzdelek(id);
+	Proizvajalec p=dmp.readProizvajalec(id);
 	
-	double avgUporabniki=FoodRatingsUtil.getAverageRating(i.getOcene());
-	double avgProizvajalec=FoodRatingsUtil.getAverageRating(i.getProizvajalec().getOcene());
-	double avgDrzave=FoodRatingsUtil.getAverageRating(i.getDrzavaIzvora().getOcene());
+	double avgUporabniki=FoodRatingsUtil.getAverageRating(p.getOcene());
 	DecimalFormat df=new DecimalFormat("0.0");
 %>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -33,14 +32,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" type="text/css" href="/FoodRatings/css/style.css" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-<title>Food Ratings - Izdelek</title>
+<title>Food Ratings - Proizvajalec</title>
 </head>
 <body>
 <div id="body_container">
 	<jsp:include page="/include/header.jsp" />
 	<jsp:include page="/include/content_header.jsp" >
-		<jsp:param value="Izdelki" name="title"/>
-		<jsp:param value="Vsi ocenjeni izdelki." name="subtitle"/>
+		<jsp:param value="Proizvajalci" name="title"/>
+		<jsp:param value="Vsi ocenjeni proizvajalci." name="subtitle"/>
 	</jsp:include>
 	<div id="content">
 		<div class="item_details">
@@ -48,37 +47,30 @@
 				<span>Ocena uporabnikov</span>
 				<div><%=df.format(avgUporabniki) %></div>
 			</div>
-			<h1><%=i.getNaziv() %></h1>
+			<h1><%=p.getNaziv() %></h1>
 			<table>
 				<tr>
 					<td>
 						<div>
-							<p class="item_att">Kategorija</p>
-							<p class="item_att_value"><%=i.getKategorija().getNaziv() %></p>
+							<p class="item_att">Naziv</p>
+							<p class="item_att_value"><%=p.getNaziv() %></p>
 						</div>
-					</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>
-						<div>
-							<p class="item_att">Proizvajalec</p>
-							<p class="item_att_value"><%=i.getProizvajalec().getNaziv()+" ("+i.getProizvajalec().getDrzava()+", "+i.getProizvajalec().getMesto()+")" %></p>
-						</div>
-					</td>
-					<td>
-						<div class="rating_small"><%=df.format(avgProizvajalec) %></div>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						<div>
-							<p class="item_att">Drzava izvora</p>
-							<p class="item_att_value"><%=i.getDrzavaIzvora().getIme() %></p>
+							<p class="item_att">Država</p>
+							<p class="item_att_value"><%=p.getDrzava() %></p>
 						</div>
 					</td>
+				</tr>
+				<tr>
 					<td>
-						<div class="rating_small"><%=df.format(avgDrzave) %></div>
+						<div>
+							<p class="item_att">Mesto</p>
+							<p class="item_att_value"><%=p.getMesto() %></p>
+						</div>
 					</td>
 				</tr>
 			</table>
@@ -87,7 +79,7 @@
 	if(session.getAttribute("userId")!=null) {
 		int rating=-1;
 		int userId=Integer.parseInt(session.getAttribute("userId").toString());
-		List<Ocena> ocene=i.getOcene();
+		List<Ocena> ocene=p.getOcene();
 		for(Ocena o:ocene) {
 			if(o.getIdUser()==userId) {
 				rating=o.getOcena();
@@ -95,9 +87,9 @@
 		}
 %>
 		<div class="item_rating_system">
-			<form action="RateIzdelekServlet" method="post">
+			<form action="RateProizvajalecServlet" method="post">
 				<input type="hidden" name="userId" value="<%=session.getAttribute("userId") %>"/>
-				<input type="hidden" name="itemId" value="<%=i.getId() %>"/>
+				<input type="hidden" name="itemId" value="<%=p.getId() %>"/>
 				<div>Vaša ocena:</div>
 				<select name="rating" class="input_select_rating">
 <%
@@ -120,7 +112,7 @@
 	}
 %>
 		<div class="buttons">
-			<input type="button" value="Nazaj" class="input_button" onclick="location.href='/FoodRatings/izdelki.jsp'"/>
+			<input type="button" value="Nazaj" class="input_button" onclick="location.href='/FoodRatings/proizvajalci.jsp'"/>
 		</div>
 	</div>
 	<div class="push"></div>

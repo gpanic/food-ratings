@@ -47,6 +47,19 @@
 	}
 %>
 		</table>
+		<div class="buttons">
+			<input type="button" value="Dodaj" class="input_button" onclick="location.href='/FoodRatings/admin/admin_kategorija_add.jsp'" />
+		</div>	
+<%
+	if(session.getAttribute("created")!=null) {
+		session.removeAttribute("created");
+%>
+		<jsp:include page="/include/message_info.jsp">
+			<jsp:param value="Kategorija je bila dodana." name="message"/>
+		</jsp:include>
+<%
+	}
+%>
 	</div>
 	<div class="push"></div>
 </div>

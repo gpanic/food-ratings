@@ -34,14 +34,14 @@
 		<jsp:param value="selected" name="uporabniki"/>
 	</jsp:include>
 	<div id="content">
-		<h1>Pregled izdelkov</h1>
+		<h1>Pregled uporabnikov</h1>
 		<table class="list_item_admin_table">
 <%
 	for(Uporabnik u:list) {
 		out.println("<tr>"
 				+"<td><div class=\"list_item_admin\" onClick=\"selectListItem("+u.getId()+")\">"
 				+"<h1>"+u.getUsername()+"</h1>"
-				+"<h2>Kategorija: "+u.getRole()+"</h2>"
+				+"<h2>Vloga: "+u.getRole()+"</h2>"
 				+"</div></td>"
 				+"<td><div class=\"delete_item\" onClick=\"deleteListItem("+u.getId()+")\">"+"X</div></td>"
 				+"</tr>");

@@ -17,9 +17,8 @@
 		<jsp:param value="Osrednja stran." name="subtitle"/>
 	</jsp:include>
 	<div id="content">
-		<h1>Naslov</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed nulla nec eros adipiscing euismod vitae ut nunc. Sed ornare risus ut massa consequat eget feugiat nisl egestas. Aliquam erat volutpat. Donec facilisis erat ac lacus feugiat at aliquam velit mattis. Vivamus et mi tellus. Vivamus luctus lorem erat, non scelerisque erat. Ut interdum gravida orci, et bibendum tortor volutpat ut. Nullam in justo est. Ut imperdiet adipiscing tortor ut dictum. Nunc venenatis porttitor dui vitae auctor. Proin pretium eleifend libero, ac faucibus purus tristique vel. Pellentesque id semper urna. Morbi porttitor auctor orci.</p>
-		<p>Nam sit amet erat lacus, sit amet dictum mauris. Suspendisse mattis scelerisque nunc quis condimentum. Donec et lectus a odio pharetra placerat sed eu libero. Curabitur tincidunt fermentum enim, nec laoreet metus semper non. Vivamus ut mauris porttitor dui pretium vulputate nec sed tellus. Nam diam velit, pharetra vitae cursus non, pulvinar ac nibh. Etiam pretium, metus ut convallis pretium, quam est commodo massa, id laoreet justo velit ut sapien. Maecenas aliquam, sem in lobortis convallis, lacus ligula ultrices massa, id euismod justo mi vel orci. Proin rhoncus mattis condimentum. Donec in dui neque. Aliquam tempus luctus odio in imperdiet. Vivamus accumsan nulla id tellus mattis iaculis. Proin eget mauris risus.</p>
+		<h1>Food Ratings</h1>
+		<p>Ideja je spletna aplikacija, ki ocenjuje kvaliteto prehrambenih izdelkov na podlagi večih parametrov, ki jih uporabniki vnašajo. Za oceno kvalitete se uporabi presoja uporabnikov in zunanje storitve. Vse ocene se beležijo v podatkovni bazi, kar omogoča statistične analize in pregled ocen izdelkov. Vsi izdelki so uvrščeni v določene kategorije in podkategorije. Aplikacija omogoča tudi urejanje vseh obstoječih izdelkov. Uporabniški vmesnik je v obliki spletne strani, ki komunicira z aplikacijskim strežnikom, ta pa podatke črpa iz podatkovne baze. Arhitektura je v slogu SOA-e, kar pomeni, da so funkcionalnosti izpostavljene v obliki spletnih storitev, ki jih uporabniški vmesnik kliče.</p>
 	</div>
 	<div class="push"></div>
 </div>

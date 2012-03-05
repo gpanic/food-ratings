@@ -1,12 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<drzave xmlns="http://www.example.org/Drzave">
+<?xml version="1.0" encoding="UTF-8"?><drzave xmlns="http://www.example.org/Drzave">
 	<drzava id="0">
-		<ime>Slovenjia</ime>
-		<kratica>SI</kratica>
-		<ocene>
-			<ocena idUser="0">7</ocena>
-		</ocene>
-	</drzava>
+		<ime>Kitajska</ime>
+		<kratica>CN</kratica>
+		
+	
+<ocene>
+<ocena idUser="0">3</ocena>
+</ocene>
+</drzava>
 	<drzava id="1">
 		<ime>Združene Države Amerike</ime>
 		<kratica>US</kratica>
@@ -17,8 +18,11 @@
 	<drzava id="0">
 		<ime>Kitajska</ime>
 		<kratica>CN</kratica>
-		<ocene>
-			<ocena idUser="0">6</ocena>
-		</ocene>
-	</drzava>
+		
+	
+<ocene>
+<ocena idUser="0">3</ocena>
+</ocene>
+</drzava>
+
 </drzave>

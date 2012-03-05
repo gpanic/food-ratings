@@ -5,9 +5,10 @@
 			<li>
 				<dl>
 					<dt>Navigacija</dt>
-					<dd><a href="">Domov</a></dd>
-					<dd><a href="">Izdelki</a></dd>
-					<dd><a href="">Admin</a></dd>
+					<dd><a href="/FoodRatings">Domov</a></dd>
+					<dd><a href="/FoodRatings/izdelki.jsp">Izdelki</a></dd>
+					<dd><a href="/FoodRatings/proizvajalci.jsp">Proizvajalci</a></dd>
+					<dd><a href="/FoodRatings/drzave.jsp">Drzave</a></dd>
 				</dl>
 			</li>
 			<li>

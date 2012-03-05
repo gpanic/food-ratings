@@ -7,7 +7,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%
 	DataManagerProxy dmp=new DataManagerProxy();
-	List<Izdelek> list=dmp.listIzdelek().getIzdelki();	
+	List<Izdelek> list=dmp.listIzdelek().getIzdelki();
 %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -37,6 +37,7 @@
 		<h1>Pregled izdelkov</h1>
 		<table class="list_item_admin_table">
 <%
+
 	for(Izdelek i:list) {
 		out.println("<tr>"
 				+"<td><div class=\"list_item_admin\" onClick=\"selectListItem("+i.getId()+")\">"
@@ -49,6 +50,19 @@
 	}
 %>
 		</table>
+		<div class="buttons">
+			<input type="button" value="Dodaj" class="input_button" onclick="location.href='/FoodRatings/admin/admin_izdelek_add.jsp'" />
+		</div>
+<%
+	if(session.getAttribute("created")!=null) {
+		session.removeAttribute("created");
+%>
+		<jsp:include page="/include/message_info.jsp">
+			<jsp:param value="Izdelek je bil dodan." name="message"/>
+		</jsp:include>
+<%
+	}
+%>
 	</div>
 	<div class="push"></div>
 </div>

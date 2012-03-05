@@ -59,7 +59,7 @@
 						<td>
 							<div>
 								<p class="item_att">Ime</p>
-								<p class="item_att_value"><input type="text" class="input_text" name="ime" value="<%=d.getIme() %>"/></p>
+								<p class="item_att_textfield"><input type="text" class="input_text" name="ime" value="<%=d.getIme() %>"/></p>
 							</div>
 						</td>
 					</tr>
@@ -67,7 +67,7 @@
 						<td>
 							<div>
 								<p class="item_att">Kratica</p>
-								<p class="item_att_value"><input type="text" class="input_text" name="kratica" value="<%=d.getKratica() %>"/></p>
+								<p class="item_att_textfield"><input type="text" class="input_text" name="kratica" value="<%=d.getKratica() %>"/></p>
 							</div>
 						</td>
 					</tr>
@@ -75,7 +75,7 @@
 			</div>
 			<div class="buttons">
 				<input type="submit" value="Posodobi" class="input_button"/>
-				<input type="button" value="Prekliči" class="input_button" onclick="location.href='/FoodRatings/admin/admin_drzave.jsp'")"/>
+				<input type="button" value="Prekliči" class="input_button" onclick="location.href='/FoodRatings/admin/admin_drzave.jsp'"/>
 			</div>
 		</form>
 	</div>
