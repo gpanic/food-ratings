@@ -155,6 +155,10 @@ public class DataManagerProxy{
         return _getDescriptor().getProxy().listIzdelek();
     }
 
+    public Double getKalorijeIzdelek(String engName) {
+        return _getDescriptor().getProxy().getKalorijeIzdelek(engName);
+    }
+
     public Boolean createKategorija(Kategorija kategorija) {
         return _getDescriptor().getProxy().createKategorija(kategorija);
     }

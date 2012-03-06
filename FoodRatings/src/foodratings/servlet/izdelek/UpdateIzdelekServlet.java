@@ -40,6 +40,7 @@ public class UpdateIzdelekServlet extends HttpServlet {
 		int idKat=Integer.parseInt(request.getParameter("kategorija"));
 		int idPro=Integer.parseInt(request.getParameter("proizvajalec"));
 		int idDrz=Integer.parseInt(request.getParameter("drzava"));
+		String eng=request.getParameter("engName");
 		
 		DataManagerProxy dmp=new DataManagerProxy();
 		
@@ -48,6 +49,7 @@ public class UpdateIzdelekServlet extends HttpServlet {
 		i.setKategorija(dmp.readKategorija(idKat));
 		i.setProizvajalec(dmp.readProizvajalec(idPro));
 		i.setDrzavaIzvora(dmp.readDrzava(idDrz));
+		i.setEngName(eng);
 		
 		dmp.updateIzdelek(i);
 		response.sendRedirect("/FoodRatings/admin/admin_izdelki.jsp");

@@ -27,6 +27,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="kategorija" type="{http://KISFoodLib}Kategorija" minOccurs="0"/>
  *         &lt;element name="proizvajalec" type="{http://KISFoodLib}Proizvajalec" minOccurs="0"/>
  *         &lt;element name="drzavaIzvora" type="{http://KISFoodLib}Drzava" minOccurs="0"/>
+ *         &lt;element name="engName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="ocene" type="{http://KISFoodLib}Ocena" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -43,6 +44,7 @@ import javax.xml.bind.annotation.XmlType;
     "kategorija",
     "proizvajalec",
     "drzavaIzvora",
+    "engName",
     "ocene"
 })
 public class Izdelek {
@@ -52,6 +54,7 @@ public class Izdelek {
     protected Kategorija kategorija;
     protected Proizvajalec proizvajalec;
     protected Drzava drzavaIzvora;
+    protected String engName;
     protected List<Ocena> ocene;
 
     /**
@@ -172,6 +175,30 @@ public class Izdelek {
      */
     public void setDrzavaIzvora(Drzava value) {
         this.drzavaIzvora = value;
+    }
+
+    /**
+     * Gets the value of the engName property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getEngName() {
+        return engName;
+    }
+
+    /**
+     * Sets the value of the engName property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setEngName(String value) {
+        this.engName = value;
     }
 
     /**

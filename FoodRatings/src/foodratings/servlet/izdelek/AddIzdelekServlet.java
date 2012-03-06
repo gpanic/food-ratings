@@ -41,6 +41,7 @@ public class AddIzdelekServlet extends HttpServlet {
 		int kat=Integer.parseInt(request.getParameter("kategorija"));
 		int pro=Integer.parseInt(request.getParameter("proizvajalec"));
 		int drz=Integer.parseInt(request.getParameter("drzava"));
+		String eng=request.getParameter("engName");
 		
 		if(!naziv.equals("")) {
 			DataManagerProxy dmp=new DataManagerProxy();
@@ -50,6 +51,7 @@ public class AddIzdelekServlet extends HttpServlet {
 			i.setKategorija(dmp.readKategorija(kat));
 			i.setProizvajalec(dmp.readProizvajalec(pro));
 			i.setDrzavaIzvora(dmp.readDrzava(drz));
+			i.setEngName(eng);
 			
 			dmp.createIzdelek(i);
 			session.setAttribute("created", true);

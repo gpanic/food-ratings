@@ -74,6 +74,10 @@
 %>
 						</select>
 					</div>
+					<div>
+						<p class="item_att">Angleško ime</p>
+						<p class="item_att_textfield"><input type="text" class="input_text" name="engName"/></p>
+					</div>
 			</div>
 			<div class="buttons">
 				<input type="submit" value="Dodaj" class="input_button"/>

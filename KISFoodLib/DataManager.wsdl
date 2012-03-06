@@ -403,7 +403,21 @@
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
-    </xsd:schema>
+            <xsd:element name="getKalorijeIzdelek">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="engName" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="getKalorijeIzdelekResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:double"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+        </xsd:schema>
   </wsdl:types>
     <wsdl:message name="createDrzavaRequestMsg">
     <wsdl:part element="tns:createDrzava" name="createDrzavaParameters1"/>
@@ -573,6 +587,12 @@
     <wsdl:message name="isAdminUporabnikResponseMsg">
     <wsdl:part element="tns:isAdminUporabnikResponse" name="isAdminUporabnikResult1"/>
   </wsdl:message>
+    <wsdl:message name="getKalorijeIzdelekRequestMsg">
+    <wsdl:part element="tns:getKalorijeIzdelek" name="getKalorijeIzdelekParameters"/>
+  </wsdl:message>
+    <wsdl:message name="getKalorijeIzdelekResponseMsg">
+    <wsdl:part element="tns:getKalorijeIzdelekResponse" name="getKalorijeIzdelekResult"/>
+  </wsdl:message>
     <wsdl:portType name="DataManager">
     <wsdl:operation name="createDrzava">
       <wsdl:input message="tns:createDrzavaRequestMsg" name="createDrzavaRequest"/>
@@ -614,77 +634,81 @@
       <wsdl:input message="tns:listIzdelekRequestMsg" name="listIzdelekRequest"/>
       <wsdl:output message="tns:listIzdelekResponseMsg" name="listIzdelekResponse"/>
     </wsdl:operation>
-    <wsdl:operation name="createKategorija">
+        <wsdl:operation name="getKalorijeIzdelek">
+      <wsdl:input message="tns:getKalorijeIzdelekRequestMsg" name="getKalorijeIzdelekRequest"/>
+      <wsdl:output message="tns:getKalorijeIzdelekResponseMsg" name="getKalorijeIzdelekResponse"/>
+    </wsdl:operation>
+        <wsdl:operation name="createKategorija">
       <wsdl:input message="tns:createKategorijaRequestMsg" name="createKategorijaRequest"/>
       <wsdl:output message="tns:createKategorijaResponseMsg" name="createKategorijaResponse"/>
     </wsdl:operation>
-    <wsdl:operation name="readKategorija">
+        <wsdl:operation name="readKategorija">
       <wsdl:input message="tns:readKategorijaRequestMsg" name="readKategorijaRequest"/>
       <wsdl:output message="tns:readKategorijaResponseMsg" name="readKategorijaResponse"/>
     </wsdl:operation>
-    <wsdl:operation name="updateKategorija">
+        <wsdl:operation name="updateKategorija">
       <wsdl:input message="tns:updateKategorijaRequestMsg" name="updateKategorijaRequest"/>
       <wsdl:output message="tns:updateKategorijaResponseMsg" name="updateKategorijaResponse"/>
     </wsdl:operation>
-    <wsdl:operation name="deleteKategorija">
+        <wsdl:operation name="deleteKategorija">
       <wsdl:input message="tns:deleteKategorijaRequestMsg" name="deleteKategorijaRequest"/>
       <wsdl:output message="tns:deleteKategorijaResponseMsg" name="deleteKategorijaResponse"/>
     </wsdl:operation>
-    <wsdl:operation name="listKategorija">
+        <wsdl:operation name="listKategorija">
       <wsdl:input message="tns:listKategorijaRequestMsg" name="listKategorijaRequest"/>
       <wsdl:output message="tns:listKategorijaResponseMsg" name="listKategorijaResponse"/>
     </wsdl:operation>
-    <wsdl:operation name="createProizvajalec">
+        <wsdl:operation name="createProizvajalec">
       <wsdl:input message="tns:createProizvajalecRequestMsg" name="createProizvajalecRequest"/>
       <wsdl:output message="tns:createProizvajalecResponseMsg" name="createProizvajalecResponse"/>
     </wsdl:operation>
-    <wsdl:operation name="readProizvajalec">
+        <wsdl:operation name="readProizvajalec">
       <wsdl:input message="tns:readProizvajalecRequestMsg" name="readProizvajalecRequest"/>
       <wsdl:output message="tns:readProizvajalecResponseMsg" name="readProizvajalecResponse"/>
     </wsdl:operation>
-    <wsdl:operation name="updateProizvajalec">
+        <wsdl:operation name="updateProizvajalec">
       <wsdl:input message="tns:updateProizvajalecRequestMsg" name="updateProizvajalecRequest"/>
       <wsdl:output message="tns:updateProizvajalecResponseMsg" name="updateProizvajalecResponse"/>
     </wsdl:operation>
-    <wsdl:operation name="deleteProizvajalec">
+        <wsdl:operation name="deleteProizvajalec">
       <wsdl:input message="tns:deleteProizvajalecRequestMsg" name="deleteProizvajalecRequest"/>
       <wsdl:output message="tns:deleteProizvajalecResponseMsg" name="deleteProizvajalecResponse"/>
     </wsdl:operation>
-    <wsdl:operation name="listProizvajalec">
+        <wsdl:operation name="listProizvajalec">
       <wsdl:input message="tns:listProizvajalecRequestMsg" name="listProizvajalecRequest"/>
       <wsdl:output message="tns:listProizvajalecResponseMsg" name="listProizvajalecResponse"/>
     </wsdl:operation>
-    <wsdl:operation name="createUporabnik">
+        <wsdl:operation name="createUporabnik">
       <wsdl:input message="tns:createUporabnikRequestMsg" name="createUporabnikRequest"/>
       <wsdl:output message="tns:createUporabnikResponseMsg" name="createUporabnikResponse"/>
     </wsdl:operation>
-    <wsdl:operation name="readUporabnik">
+        <wsdl:operation name="readUporabnik">
       <wsdl:input message="tns:readUporabnikRequestMsg" name="readUporabnikRequest"/>
       <wsdl:output message="tns:readUporabnikResponseMsg" name="readUporabnikResponse"/>
     </wsdl:operation>
-    <wsdl:operation name="updateUporabnik">
+        <wsdl:operation name="updateUporabnik">
       <wsdl:input message="tns:updateUporabnikRequestMsg" name="updateUporabnikRequest"/>
       <wsdl:output message="tns:updateUporabnikResponseMsg" name="updateUporabnikResponse"/>
     </wsdl:operation>
-    <wsdl:operation name="deleteUporabnik">
+        <wsdl:operation name="deleteUporabnik">
       <wsdl:input message="tns:deleteUporabnikRequestMsg" name="deleteUporabnikRequest"/>
       <wsdl:output message="tns:deleteUporabnikResponseMsg" name="deleteUporabnikResponse"/>
     </wsdl:operation>
-    <wsdl:operation name="listUporabnik">
+        <wsdl:operation name="listUporabnik">
       <wsdl:input message="tns:listUporabnikRequestMsg" name="listUporabnikRequest"/>
       <wsdl:output message="tns:listUporabnikResponseMsg" name="listUporabnikResponse"/>
     </wsdl:operation>
-    <wsdl:operation name="loginUporabnik">
+        <wsdl:operation name="loginUporabnik">
       <wsdl:input message="tns:loginUporabnikRequestMsg" name="loginUporabnikRequest"/>
       <wsdl:output message="tns:loginUporabnikResponseMsg" name="loginUporabnikResponse"/>
     </wsdl:operation>
-    <wsdl:operation name="existsUporabnik">
+        <wsdl:operation name="existsUporabnik">
       <wsdl:input message="tns:existsUporabnikRequestMsg" name="existsUporabnikRequest"/>
       <wsdl:output message="tns:existsUporabnikResponseMsg" name="existsUporabnikResponse"/>
     </wsdl:operation>
-    <wsdl:operation name="isAdminUporabnik">
+        <wsdl:operation name="isAdminUporabnik">
       <wsdl:input message="tns:isAdminUporabnikRequestMsg" name="isAdminUporabnikRequest"/>
       <wsdl:output message="tns:isAdminUporabnikResponseMsg" name="isAdminUporabnikResponse"/>
     </wsdl:operation>
-  </wsdl:portType>
+    </wsdl:portType>
 </wsdl:definitions>

@@ -148,6 +148,8 @@ public class IzdelekDAO implements DAO<DataObject, Integer> {
 							n2.getAttributes().getNamedItem("id").setNodeValue(Integer.toString(data.getDataObject("proizvajalec").getInt("id")));
 						} else if(n2.getNodeName().equals("drzavaIzvora")) {
 							n2.getAttributes().getNamedItem("id").setNodeValue(Integer.toString(data.getDataObject("drzavaIzvora").getInt("id")));
+						} else if(n2.getNodeName().equals("engName")) {
+								n2.getFirstChild().setNodeValue(data.getString("engName"));
 						} else if(n2.getNodeName().equals("ocene")) {
 							n2.getParentNode().removeChild(n2);
 							Element e3=doc.createElement("ocene");
@@ -288,6 +290,10 @@ public class IzdelekDAO implements DAO<DataObject, Integer> {
 		
 		e2=doc.createElement("drzavaIzvora");
 		e2.setAttribute("id",Integer.toString((data.getDataObject("drzavaIzvora").getInt("id"))));
+		izdelek.appendChild(e2);
+		
+		e2=doc.createElement("engName");
+		e2.setTextContent(data.getString("engName"));
 		izdelek.appendChild(e2);
 		
 		e2=doc.createElement("ocene");

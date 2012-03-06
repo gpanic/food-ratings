@@ -144,7 +144,9 @@ public class DataManagerImpl {
 	 * on the type of input, output and fault(s).
 	 */
 	public Boolean createDrzava(DataObject drzava) {
-		DataObject response=(DataObject)this.locateService_ManageDrzavaPartner().invoke("createDrzava", drzava);
+		DataObject response = (DataObject) this
+				.locateService_ManageDrzavaPartner().invoke("createDrzava",
+						drzava);
 		return response.getBoolean("result");
 	}
 
@@ -157,7 +159,8 @@ public class DataManagerImpl {
 	 * on the type of input, output and fault(s).
 	 */
 	public DataObject readDrzava(Integer id) {
-		DataObject response=(DataObject)this.locateService_ManageDrzavaPartner().invoke("readDrzava", id);
+		DataObject response = (DataObject) this
+				.locateService_ManageDrzavaPartner().invoke("readDrzava", id);
 		return response.getDataObject("drzava");
 	}
 
@@ -170,7 +173,9 @@ public class DataManagerImpl {
 	 * on the type of input, output and fault(s).
 	 */
 	public Boolean updateDrzava(DataObject drzava) {
-		DataObject response=(DataObject)this.locateService_ManageDrzavaPartner().invoke("updateDrzava", drzava);
+		DataObject response = (DataObject) this
+				.locateService_ManageDrzavaPartner().invoke("updateDrzava",
+						drzava);
 		return response.getBoolean("result");
 	}
 
@@ -182,7 +187,8 @@ public class DataManagerImpl {
 	 * on the type of input, output and fault(s).
 	 */
 	public Boolean deleteDrzava(Integer id) {
-		DataObject response=(DataObject)this.locateService_ManageDrzavaPartner().invoke("deleteDrzava", id);
+		DataObject response = (DataObject) this
+				.locateService_ManageDrzavaPartner().invoke("deleteDrzava", id);
 		return response.getBoolean("result");
 	}
 
@@ -195,7 +201,8 @@ public class DataManagerImpl {
 	 * on the type of input, output and fault(s).
 	 */
 	public DataObject listDrzava() {
-		DataObject response=(DataObject)this.locateService_ManageDrzavaPartner().invoke("listDrzava", null);
+		DataObject response = (DataObject) this
+				.locateService_ManageDrzavaPartner().invoke("listDrzava", null);
 		return response.getDataObject("drzave");
 	}
 
@@ -208,7 +215,9 @@ public class DataManagerImpl {
 	 * on the type of input, output and fault(s).
 	 */
 	public Boolean createIzdelek(DataObject izdelek) {
-		DataObject response=(DataObject)this.locateService_ManageIzdelekPartner().invoke("createIzdelek", izdelek);
+		DataObject response = (DataObject) this
+				.locateService_ManageIzdelekPartner().invoke("createIzdelek",
+						izdelek);
 		return response.getBoolean("result");
 	}
 
@@ -221,7 +230,8 @@ public class DataManagerImpl {
 	 * on the type of input, output and fault(s).
 	 */
 	public DataObject readIzdelek(Integer id) {
-		DataObject response=(DataObject)this.locateService_ManageIzdelekPartner().invoke("readIzdelek", id);
+		DataObject response = (DataObject) this
+				.locateService_ManageIzdelekPartner().invoke("readIzdelek", id);
 		return response.getDataObject("izdelek");
 	}
 
@@ -234,7 +244,9 @@ public class DataManagerImpl {
 	 * on the type of input, output and fault(s).
 	 */
 	public Boolean updateIzdelek(DataObject izdelek) {
-		DataObject response=(DataObject)this.locateService_ManageIzdelekPartner().invoke("updateIzdelek", izdelek);
+		DataObject response = (DataObject) this
+				.locateService_ManageIzdelekPartner().invoke("updateIzdelek",
+						izdelek);
 		return response.getBoolean("result");
 	}
 
@@ -246,7 +258,9 @@ public class DataManagerImpl {
 	 * on the type of input, output and fault(s).
 	 */
 	public Boolean deleteIzdelek(Integer id) {
-		DataObject response=(DataObject)this.locateService_ManageIzdelekPartner().invoke("deleteIzdelek", id);
+		DataObject response = (DataObject) this
+				.locateService_ManageIzdelekPartner().invoke("deleteIzdelek",
+						id);
 		return response.getBoolean("result");
 	}
 
@@ -259,8 +273,22 @@ public class DataManagerImpl {
 	 * on the type of input, output and fault(s).
 	 */
 	public DataObject listIzdelek() {
-		DataObject response=(DataObject)this.locateService_ManageIzdelekPartner().invoke("listIzdelek", null);
+		DataObject response = (DataObject) this
+				.locateService_ManageIzdelekPartner().invoke("listIzdelek",
+						null);
 		return response.getDataObject("izdelki");
+	}
+
+	/**
+	 * Method generated to support implementation of operation "getKalorijeIzdelek" defined for WSDL port type 
+	 * named "DataManager".
+	 * 
+	 * Please refer to the WSDL Definition for more information 
+	 * on the type of input, output and fault(s).
+	 */
+	public Double getKalorijeIzdelek(String engName) {
+		DataObject response=(DataObject)this.locateService_ManageIzdelekPartner().invoke("getKalorije", engName);
+		return response.getDouble("result");
 	}
 
 	/**
@@ -272,7 +300,9 @@ public class DataManagerImpl {
 	 * on the type of input, output and fault(s).
 	 */
 	public Boolean createKategorija(DataObject kategorija) {
-		DataObject response=(DataObject)this.locateService_ManageKategorijaPartner().invoke("createKategorija", kategorija);
+		DataObject response = (DataObject) this
+				.locateService_ManageKategorijaPartner().invoke(
+						"createKategorija", kategorija);
 		return response.getBoolean("result");
 	}
 
@@ -285,7 +315,9 @@ public class DataManagerImpl {
 	 * on the type of input, output and fault(s).
 	 */
 	public DataObject readKategorija(Integer id) {
-		DataObject response=(DataObject)this.locateService_ManageKategorijaPartner().invoke("readKategorija", id);
+		DataObject response = (DataObject) this
+				.locateService_ManageKategorijaPartner().invoke(
+						"readKategorija", id);
 		return response.getDataObject("kategorija");
 	}
 
@@ -298,7 +330,9 @@ public class DataManagerImpl {
 	 * on the type of input, output and fault(s).
 	 */
 	public Boolean updateKategorija(DataObject kategorija) {
-		DataObject response=(DataObject)this.locateService_ManageKategorijaPartner().invoke("updateKategorija", kategorija);
+		DataObject response = (DataObject) this
+				.locateService_ManageKategorijaPartner().invoke(
+						"updateKategorija", kategorija);
 		return response.getBoolean("result");
 	}
 
@@ -310,7 +344,9 @@ public class DataManagerImpl {
 	 * on the type of input, output and fault(s).
 	 */
 	public Boolean deleteKategorija(Integer id) {
-		DataObject response=(DataObject)this.locateService_ManageKategorijaPartner().invoke("deleteKategorija", id);
+		DataObject response = (DataObject) this
+				.locateService_ManageKategorijaPartner().invoke(
+						"deleteKategorija", id);
 		return response.getBoolean("result");
 	}
 
@@ -323,7 +359,9 @@ public class DataManagerImpl {
 	 * on the type of input, output and fault(s).
 	 */
 	public DataObject listKategorija() {
-		DataObject response=(DataObject)this.locateService_ManageKategorijaPartner().invoke("listKategorija", null);
+		DataObject response = (DataObject) this
+				.locateService_ManageKategorijaPartner().invoke(
+						"listKategorija", null);
 		return response.getDataObject("kategorije");
 	}
 
@@ -336,7 +374,9 @@ public class DataManagerImpl {
 	 * on the type of input, output and fault(s).
 	 */
 	public Boolean createProizvajalec(DataObject proizvajalec) {
-		DataObject response=(DataObject)this.locateService_ManageProizvajalecPartner().invoke("createProizvajalec", proizvajalec);
+		DataObject response = (DataObject) this
+				.locateService_ManageProizvajalecPartner().invoke(
+						"createProizvajalec", proizvajalec);
 		return response.getBoolean("result");
 	}
 
@@ -349,7 +389,9 @@ public class DataManagerImpl {
 	 * on the type of input, output and fault(s).
 	 */
 	public DataObject readProizvajalec(Integer id) {
-		DataObject response=(DataObject)this.locateService_ManageProizvajalecPartner().invoke("readProizvajalec", id);
+		DataObject response = (DataObject) this
+				.locateService_ManageProizvajalecPartner().invoke(
+						"readProizvajalec", id);
 		return response.getDataObject("proizvajalec");
 	}
 
@@ -362,7 +404,9 @@ public class DataManagerImpl {
 	 * on the type of input, output and fault(s).
 	 */
 	public Boolean updateProizvajalec(DataObject proizvajalec) {
-		DataObject response=(DataObject)this.locateService_ManageProizvajalecPartner().invoke("updateProizvajalec", proizvajalec);
+		DataObject response = (DataObject) this
+				.locateService_ManageProizvajalecPartner().invoke(
+						"updateProizvajalec", proizvajalec);
 		return response.getBoolean("result");
 	}
 
@@ -374,7 +418,9 @@ public class DataManagerImpl {
 	 * on the type of input, output and fault(s).
 	 */
 	public Boolean deleteProizvajalec(Integer id) {
-		DataObject response=(DataObject)this.locateService_ManageProizvajalecPartner().invoke("deleteProizvajalec", id);
+		DataObject response = (DataObject) this
+				.locateService_ManageProizvajalecPartner().invoke(
+						"deleteProizvajalec", id);
 		return response.getBoolean("result");
 	}
 
@@ -387,7 +433,9 @@ public class DataManagerImpl {
 	 * on the type of input, output and fault(s).
 	 */
 	public DataObject listProizvajalec() {
-		DataObject response=(DataObject)this.locateService_ManageProizvajalecPartner().invoke("listProizvajalec", null);
+		DataObject response = (DataObject) this
+				.locateService_ManageProizvajalecPartner().invoke(
+						"listProizvajalec", null);
 		return response.getDataObject("proizvajalci");
 	}
 
@@ -400,7 +448,9 @@ public class DataManagerImpl {
 	 * on the type of input, output and fault(s).
 	 */
 	public Boolean createUporabnik(DataObject uporabnik) {
-		DataObject response=(DataObject)this.locateService_ManageUporabnikPartner().invoke("createUporabnik", uporabnik);
+		DataObject response = (DataObject) this
+				.locateService_ManageUporabnikPartner().invoke(
+						"createUporabnik", uporabnik);
 		return response.getBoolean("result");
 	}
 
@@ -413,7 +463,9 @@ public class DataManagerImpl {
 	 * on the type of input, output and fault(s).
 	 */
 	public DataObject readUporabnik(Integer id) {
-		DataObject response=(DataObject)this.locateService_ManageUporabnikPartner().invoke("readUporabnik", id);
+		DataObject response = (DataObject) this
+				.locateService_ManageUporabnikPartner().invoke("readUporabnik",
+						id);
 		return response.getDataObject("uporabnik");
 	}
 
@@ -426,7 +478,9 @@ public class DataManagerImpl {
 	 * on the type of input, output and fault(s).
 	 */
 	public Boolean updateUporabnik(DataObject uporabnik) {
-		DataObject response=(DataObject)this.locateService_ManageUporabnikPartner().invoke("updateUporabnik", uporabnik);
+		DataObject response = (DataObject) this
+				.locateService_ManageUporabnikPartner().invoke(
+						"updateUporabnik", uporabnik);
 		return response.getBoolean("result");
 	}
 
@@ -438,7 +492,9 @@ public class DataManagerImpl {
 	 * on the type of input, output and fault(s).
 	 */
 	public Boolean deleteUporabnik(Integer id) {
-		DataObject response=(DataObject)this.locateService_ManageUporabnikPartner().invoke("deleteUporabnik", id);
+		DataObject response = (DataObject) this
+				.locateService_ManageUporabnikPartner().invoke(
+						"deleteUporabnik", id);
 		return response.getBoolean("result");
 	}
 
@@ -451,7 +507,9 @@ public class DataManagerImpl {
 	 * on the type of input, output and fault(s).
 	 */
 	public DataObject listUporabnik() {
-		DataObject response=(DataObject)this.locateService_ManageUporabnikPartner().invoke("listUporabnik", null);
+		DataObject response = (DataObject) this
+				.locateService_ManageUporabnikPartner().invoke("listUporabnik",
+						null);
 		return response.getDataObject("uporabniki");
 	}
 
@@ -464,7 +522,9 @@ public class DataManagerImpl {
 	 * on the type of input, output and fault(s).
 	 */
 	public DataObject loginUporabnik(DataObject uporabnik) {
-		DataObject response=(DataObject)this.locateService_ManageUporabnikPartner().invoke("loginUporabnik", uporabnik);
+		DataObject response = (DataObject) this
+				.locateService_ManageUporabnikPartner().invoke(
+						"loginUporabnik", uporabnik);
 		return response.getDataObject("result");
 	}
 
@@ -477,7 +537,9 @@ public class DataManagerImpl {
 	 * on the type of input, output and fault(s).
 	 */
 	public Boolean existsUporabnik(DataObject uporabnik) {
-		DataObject response=(DataObject)this.locateService_ManageUporabnikPartner().invoke("existsUporabnik", uporabnik);
+		DataObject response = (DataObject) this
+				.locateService_ManageUporabnikPartner().invoke(
+						"existsUporabnik", uporabnik);
 		return response.getBoolean("result");
 	}
 
@@ -489,7 +551,9 @@ public class DataManagerImpl {
 	 * on the type of input, output and fault(s).
 	 */
 	public Boolean isAdminUporabnik(Integer id) {
-		DataObject response=(DataObject)this.locateService_ManageUporabnikPartner().invoke("isAdminUporabnik", id);
+		DataObject response = (DataObject) this
+				.locateService_ManageUporabnikPartner().invoke(
+						"isAdminUporabnik", id);
 		return response.getBoolean("result");
 	}
 
@@ -639,6 +703,16 @@ public class DataManagerImpl {
 	 * of wsdl interface "ManageIzdelek"	
 	 */
 	public void onListIzdelekResponse(Ticket __ticket, DataObject returnValue,
+			Exception exception) {
+		//TODO Needs to be implemented.
+	}
+
+	/**
+	 * Method generated to support the async implementation using callback
+	 * for the operation "ManageIzdelek#getKalorije(String engName)"
+	 * of wsdl interface "ManageIzdelek"	
+	 */
+	public void onGetKalorijeResponse(Ticket __ticket, Double returnValue,
 			Exception exception) {
 		//TODO Needs to be implemented.
 	}

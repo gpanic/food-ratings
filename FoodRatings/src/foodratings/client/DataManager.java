@@ -156,6 +156,20 @@ public interface DataManager {
 
     /**
      * 
+     * @param engName
+     * @return
+     *     returns java.lang.Double
+     */
+    @WebMethod
+    @WebResult(name = "result", targetNamespace = "")
+    @RequestWrapper(localName = "getKalorijeIzdelek", targetNamespace = "http://KISFoodLib/DataManager", className = "foodratings.client.GetKalorijeIzdelek")
+    @ResponseWrapper(localName = "getKalorijeIzdelekResponse", targetNamespace = "http://KISFoodLib/DataManager", className = "foodratings.client.GetKalorijeIzdelekResponse")
+    public Double getKalorijeIzdelek(
+        @WebParam(name = "engName", targetNamespace = "")
+        String engName);
+
+    /**
+     * 
      * @param kategorija
      * @return
      *     returns java.lang.Boolean

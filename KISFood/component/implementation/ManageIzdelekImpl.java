@@ -1,5 +1,7 @@
 package component.implementation;
 
+import com.ibm.websphere.sca.Service;
+import com.ibm.websphere.sca.Ticket;
 import java.util.List;
 
 import kis.dao.IzdelekDAO;
@@ -26,6 +28,28 @@ public class ManageIzdelekImpl {
 	@SuppressWarnings("unused")
 	private Object getMyService() {
 		return (Object) ServiceManager.INSTANCE.locateService("self");
+	}
+
+	/**
+	 * This method is used to locate the service for the reference
+	 * named "NutritionDataManagerPartner".  This will return an instance of 
+	 * {@link com.ibm.websphere.sca.Service}.  This is the dynamic
+	 * interface which is used to invoke operations on the reference service
+	 * either synchronously or asynchronously.  You will need to pass the operation
+	 * name in order to invoke an operation on the service.
+	 *
+	 * @generated (com.ibm.wbit.java)
+	 *
+	 * @return Service
+	 */
+	private Service _NutritionDataManagerPartner = null;
+
+	public Service locateService_NutritionDataManagerPartner() {
+		if (_NutritionDataManagerPartner == null) {
+			_NutritionDataManagerPartner = (Service) ServiceManager.INSTANCE
+					.locateService("NutritionDataManagerPartner");
+		}
+		return _NutritionDataManagerPartner;
 	}
 
 	/**
@@ -102,6 +126,29 @@ public class ManageIzdelekImpl {
 		izdelki.setList("izdelki", list);
 
 		return izdelki;
+	}
+
+	/**
+	 * Method generated to support implementation of operation "getKalorije" defined for WSDL port type 
+	 * named "ManageIzdelek".
+	 * 
+	 * Please refer to the WSDL Definition for more information 
+	 * on the type of input, output and fault(s).
+	 */
+	public Double getKalorije(String engName) {
+		System.out.println("MANAGEIZDELEK GETKALORIJE");
+		DataObject result=(DataObject)this.locateService_NutritionDataManagerPartner().invoke("getKalorije", engName);
+		return result.getDouble("result");
+	}
+
+	/**
+	 * Method generated to support the async implementation using callback
+	 * for the operation "NutritionDataManager#getKalorije(String engName)"
+	 * of wsdl interface "NutritionDataManager"	
+	 */
+	public void onGetKalorijeResponse(Ticket __ticket, Double returnValue,
+			Exception exception) {
+		//TODO Needs to be implemented.
 	}
 
 }

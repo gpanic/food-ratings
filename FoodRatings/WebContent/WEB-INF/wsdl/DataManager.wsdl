@@ -403,7 +403,21 @@
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
-    </xsd:schema>
+            <xsd:element name="getKalorijeIzdelek">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="engName" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="getKalorijeIzdelekResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:double"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+        </xsd:schema>
   </wsdl:types>
   <wsdl:message name="updateKategorijaRequestMsg">
     <wsdl:part element="tns:updateKategorija" name="updateKategorijaParameters1">
@@ -477,6 +491,10 @@
     <wsdl:part element="tns:listDrzava" name="listDrzavaParameters1">
     </wsdl:part>
   </wsdl:message>
+  <wsdl:message name="getKalorijeIzdelekRequestMsg">
+    <wsdl:part element="tns:getKalorijeIzdelek" name="getKalorijeIzdelekParameters">
+    </wsdl:part>
+  </wsdl:message>
   <wsdl:message name="listIzdelekRequestMsg">
     <wsdl:part element="tns:listIzdelek" name="listIzdelekParameters1">
     </wsdl:part>
@@ -495,6 +513,10 @@
   </wsdl:message>
   <wsdl:message name="readProizvajalecResponseMsg">
     <wsdl:part element="tns:readProizvajalecResponse" name="readProizvajalecResult1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getKalorijeIzdelekResponseMsg">
+    <wsdl:part element="tns:getKalorijeIzdelekResponse" name="getKalorijeIzdelekResult">
     </wsdl:part>
   </wsdl:message>
   <wsdl:message name="deleteProizvajalecRequestMsg">
@@ -688,6 +710,12 @@
       <wsdl:input message="tns:listIzdelekRequestMsg" name="listIzdelekRequest">
     </wsdl:input>
       <wsdl:output message="tns:listIzdelekResponseMsg" name="listIzdelekResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getKalorijeIzdelek">
+      <wsdl:input message="tns:getKalorijeIzdelekRequestMsg" name="getKalorijeIzdelekRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:getKalorijeIzdelekResponseMsg" name="getKalorijeIzdelekResponse">
     </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="createKategorija">

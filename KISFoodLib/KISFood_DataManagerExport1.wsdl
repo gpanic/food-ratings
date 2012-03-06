@@ -92,6 +92,15 @@
         <soap:body use="literal"/>
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="getKalorijeIzdelek">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="getKalorijeIzdelekRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getKalorijeIzdelekResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="createKategorija">
       <soap:operation soapAction=""/>
       <wsdl:input name="createKategorijaRequest">

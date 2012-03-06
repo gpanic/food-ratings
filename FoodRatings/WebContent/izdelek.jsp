@@ -26,6 +26,8 @@
 	double avgUporabniki=FoodRatingsUtil.getAverageRating(i.getOcene());
 	double avgProizvajalec=FoodRatingsUtil.getAverageRating(i.getProizvajalec().getOcene());
 	double avgDrzave=FoodRatingsUtil.getAverageRating(i.getDrzavaIzvora().getOcene());
+	
+	double kalorije=dmp.getKalorijeIzdelek(i.getEngName());
 	DecimalFormat df=new DecimalFormat("0.0");
 %>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -80,6 +82,15 @@
 					<td>
 						<div class="rating_small"><%=df.format(avgDrzave) %></div>
 					</td>
+				</tr>
+				<tr>
+					<td>
+						<div>
+							<p class="item_att">Kalorije (na 100g)</p>
+							<p class="item_att_value"><%if(kalorije>=0){out.print(df.format(kalorije));} else {out.print("ni podatkov");} %></p>
+						</div>
+					</td>
+					<td></td>
 				</tr>
 			</table>
 		</div>

@@ -34,123 +34,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link UpdateIzdelek }
+     * Create an instance of {@link ListProizvajalec }
      * 
      */
-    public UpdateIzdelek createUpdateIzdelek() {
-        return new UpdateIzdelek();
-    }
-
-    /**
-     * Create an instance of {@link CreateKategorija }
-     * 
-     */
-    public CreateKategorija createCreateKategorija() {
-        return new CreateKategorija();
-    }
-
-    /**
-     * Create an instance of {@link ListKategorijaResponse }
-     * 
-     */
-    public ListKategorijaResponse createListKategorijaResponse() {
-        return new ListKategorijaResponse();
-    }
-
-    /**
-     * Create an instance of {@link DeleteKategorijaResponse }
-     * 
-     */
-    public DeleteKategorijaResponse createDeleteKategorijaResponse() {
-        return new DeleteKategorijaResponse();
-    }
-
-    /**
-     * Create an instance of {@link LoginUporabnik }
-     * 
-     */
-    public LoginUporabnik createLoginUporabnik() {
-        return new LoginUporabnik();
-    }
-
-    /**
-     * Create an instance of {@link ListKategorija }
-     * 
-     */
-    public ListKategorija createListKategorija() {
-        return new ListKategorija();
-    }
-
-    /**
-     * Create an instance of {@link UpdateProizvajalecResponse }
-     * 
-     */
-    public UpdateProizvajalecResponse createUpdateProizvajalecResponse() {
-        return new UpdateProizvajalecResponse();
-    }
-
-    /**
-     * Create an instance of {@link UpdateDrzava }
-     * 
-     */
-    public UpdateDrzava createUpdateDrzava() {
-        return new UpdateDrzava();
-    }
-
-    /**
-     * Create an instance of {@link ReadProizvajalec }
-     * 
-     */
-    public ReadProizvajalec createReadProizvajalec() {
-        return new ReadProizvajalec();
-    }
-
-    /**
-     * Create an instance of {@link ReadIzdelekResponse }
-     * 
-     */
-    public ReadIzdelekResponse createReadIzdelekResponse() {
-        return new ReadIzdelekResponse();
-    }
-
-    /**
-     * Create an instance of {@link ReadKategorijaResponse }
-     * 
-     */
-    public ReadKategorijaResponse createReadKategorijaResponse() {
-        return new ReadKategorijaResponse();
-    }
-
-    /**
-     * Create an instance of {@link ReadUporabnikResponse }
-     * 
-     */
-    public ReadUporabnikResponse createReadUporabnikResponse() {
-        return new ReadUporabnikResponse();
-    }
-
-    /**
-     * Create an instance of {@link UpdateIzdelekResponse }
-     * 
-     */
-    public UpdateIzdelekResponse createUpdateIzdelekResponse() {
-        return new UpdateIzdelekResponse();
-    }
-
-    /**
-     * Create an instance of {@link IsAdminUporabnikResponse }
-     * 
-     */
-    public IsAdminUporabnikResponse createIsAdminUporabnikResponse() {
-        return new IsAdminUporabnikResponse();
-    }
-
-    /**
-     * Create an instance of {@link CreateUporabnik }
-     * 
-     */
-    public CreateUporabnik createCreateUporabnik() {
-        return new CreateUporabnik();
+    public ListProizvajalec createListProizvajalec() {
+        return new ListProizvajalec();
     }
 
     /**
@@ -162,35 +50,35 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link Kategorije }
+     * 
+     */
+    public Kategorije createKategorije() {
+        return new Kategorije();
+    }
+
+    /**
+     * Create an instance of {@link CreateKategorija }
+     * 
+     */
+    public CreateKategorija createCreateKategorija() {
+        return new CreateKategorija();
+    }
+
+    /**
+     * Create an instance of {@link Ocena }
+     * 
+     */
+    public Ocena createOcena() {
+        return new Ocena();
+    }
+
+    /**
      * Create an instance of {@link DeleteIzdelek }
      * 
      */
     public DeleteIzdelek createDeleteIzdelek() {
         return new DeleteIzdelek();
-    }
-
-    /**
-     * Create an instance of {@link Izdelek }
-     * 
-     */
-    public Izdelek createIzdelek() {
-        return new Izdelek();
-    }
-
-    /**
-     * Create an instance of {@link Uporabnik }
-     * 
-     */
-    public Uporabnik createUporabnik() {
-        return new Uporabnik();
-    }
-
-    /**
-     * Create an instance of {@link DeleteDrzava }
-     * 
-     */
-    public DeleteDrzava createDeleteDrzava() {
-        return new DeleteDrzava();
     }
 
     /**
@@ -202,11 +90,355 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetKalorijeIzdelekResponse }
+     * 
+     */
+    public GetKalorijeIzdelekResponse createGetKalorijeIzdelekResponse() {
+        return new GetKalorijeIzdelekResponse();
+    }
+
+    /**
+     * Create an instance of {@link DeleteDrzava }
+     * 
+     */
+    public DeleteDrzava createDeleteDrzava() {
+        return new DeleteDrzava();
+    }
+
+    /**
+     * Create an instance of {@link LoginUporabnik }
+     * 
+     */
+    public LoginUporabnik createLoginUporabnik() {
+        return new LoginUporabnik();
+    }
+
+    /**
+     * Create an instance of {@link DeleteDrzavaResponse }
+     * 
+     */
+    public DeleteDrzavaResponse createDeleteDrzavaResponse() {
+        return new DeleteDrzavaResponse();
+    }
+
+    /**
+     * Create an instance of {@link Uporabniki }
+     * 
+     */
+    public Uporabniki createUporabniki() {
+        return new Uporabniki();
+    }
+
+    /**
+     * Create an instance of {@link ExistsUporabnik }
+     * 
+     */
+    public ExistsUporabnik createExistsUporabnik() {
+        return new ExistsUporabnik();
+    }
+
+    /**
+     * Create an instance of {@link IsAdminUporabnikResponse }
+     * 
+     */
+    public IsAdminUporabnikResponse createIsAdminUporabnikResponse() {
+        return new IsAdminUporabnikResponse();
+    }
+
+    /**
+     * Create an instance of {@link UpdateKategorijaResponse }
+     * 
+     */
+    public UpdateKategorijaResponse createUpdateKategorijaResponse() {
+        return new UpdateKategorijaResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetKalorijeIzdelek }
+     * 
+     */
+    public GetKalorijeIzdelek createGetKalorijeIzdelek() {
+        return new GetKalorijeIzdelek();
+    }
+
+    /**
      * Create an instance of {@link ListProizvajalecResponse }
      * 
      */
     public ListProizvajalecResponse createListProizvajalecResponse() {
         return new ListProizvajalecResponse();
+    }
+
+    /**
+     * Create an instance of {@link DeleteKategorijaResponse }
+     * 
+     */
+    public DeleteKategorijaResponse createDeleteKategorijaResponse() {
+        return new DeleteKategorijaResponse();
+    }
+
+    /**
+     * Create an instance of {@link CreateIzdelek }
+     * 
+     */
+    public CreateIzdelek createCreateIzdelek() {
+        return new CreateIzdelek();
+    }
+
+    /**
+     * Create an instance of {@link UpdateUporabnikResponse }
+     * 
+     */
+    public UpdateUporabnikResponse createUpdateUporabnikResponse() {
+        return new UpdateUporabnikResponse();
+    }
+
+    /**
+     * Create an instance of {@link CreateUporabnikResponse }
+     * 
+     */
+    public CreateUporabnikResponse createCreateUporabnikResponse() {
+        return new CreateUporabnikResponse();
+    }
+
+    /**
+     * Create an instance of {@link ReadDrzava }
+     * 
+     */
+    public ReadDrzava createReadDrzava() {
+        return new ReadDrzava();
+    }
+
+    /**
+     * Create an instance of {@link ListIzdelekResponse }
+     * 
+     */
+    public ListIzdelekResponse createListIzdelekResponse() {
+        return new ListIzdelekResponse();
+    }
+
+    /**
+     * Create an instance of {@link ListDrzava }
+     * 
+     */
+    public ListDrzava createListDrzava() {
+        return new ListDrzava();
+    }
+
+    /**
+     * Create an instance of {@link CreateUporabnik }
+     * 
+     */
+    public CreateUporabnik createCreateUporabnik() {
+        return new CreateUporabnik();
+    }
+
+    /**
+     * Create an instance of {@link Uporabnik }
+     * 
+     */
+    public Uporabnik createUporabnik() {
+        return new Uporabnik();
+    }
+
+    /**
+     * Create an instance of {@link UpdateProizvajalecResponse }
+     * 
+     */
+    public UpdateProizvajalecResponse createUpdateProizvajalecResponse() {
+        return new UpdateProizvajalecResponse();
+    }
+
+    /**
+     * Create an instance of {@link UpdateProizvajalec }
+     * 
+     */
+    public UpdateProizvajalec createUpdateProizvajalec() {
+        return new UpdateProizvajalec();
+    }
+
+    /**
+     * Create an instance of {@link DeleteKategorija }
+     * 
+     */
+    public DeleteKategorija createDeleteKategorija() {
+        return new DeleteKategorija();
+    }
+
+    /**
+     * Create an instance of {@link Izdelki }
+     * 
+     */
+    public Izdelki createIzdelki() {
+        return new Izdelki();
+    }
+
+    /**
+     * Create an instance of {@link DeleteProizvajalecResponse }
+     * 
+     */
+    public DeleteProizvajalecResponse createDeleteProizvajalecResponse() {
+        return new DeleteProizvajalecResponse();
+    }
+
+    /**
+     * Create an instance of {@link ReadKategorija }
+     * 
+     */
+    public ReadKategorija createReadKategorija() {
+        return new ReadKategorija();
+    }
+
+    /**
+     * Create an instance of {@link CreateProizvajalecResponse }
+     * 
+     */
+    public CreateProizvajalecResponse createCreateProizvajalecResponse() {
+        return new CreateProizvajalecResponse();
+    }
+
+    /**
+     * Create an instance of {@link DeleteUporabnikResponse }
+     * 
+     */
+    public DeleteUporabnikResponse createDeleteUporabnikResponse() {
+        return new DeleteUporabnikResponse();
+    }
+
+    /**
+     * Create an instance of {@link Proizvajalci }
+     * 
+     */
+    public Proizvajalci createProizvajalci() {
+        return new Proizvajalci();
+    }
+
+    /**
+     * Create an instance of {@link ListDrzavaResponse }
+     * 
+     */
+    public ListDrzavaResponse createListDrzavaResponse() {
+        return new ListDrzavaResponse();
+    }
+
+    /**
+     * Create an instance of {@link UpdateKategorija }
+     * 
+     */
+    public UpdateKategorija createUpdateKategorija() {
+        return new UpdateKategorija();
+    }
+
+    /**
+     * Create an instance of {@link CreateDrzavaResponse }
+     * 
+     */
+    public CreateDrzavaResponse createCreateDrzavaResponse() {
+        return new CreateDrzavaResponse();
+    }
+
+    /**
+     * Create an instance of {@link DeleteUporabnik }
+     * 
+     */
+    public DeleteUporabnik createDeleteUporabnik() {
+        return new DeleteUporabnik();
+    }
+
+    /**
+     * Create an instance of {@link UpdateIzdelekResponse }
+     * 
+     */
+    public UpdateIzdelekResponse createUpdateIzdelekResponse() {
+        return new UpdateIzdelekResponse();
+    }
+
+    /**
+     * Create an instance of {@link Drzave }
+     * 
+     */
+    public Drzave createDrzave() {
+        return new Drzave();
+    }
+
+    /**
+     * Create an instance of {@link UpdateDrzavaResponse }
+     * 
+     */
+    public UpdateDrzavaResponse createUpdateDrzavaResponse() {
+        return new UpdateDrzavaResponse();
+    }
+
+    /**
+     * Create an instance of {@link CreateDrzava }
+     * 
+     */
+    public CreateDrzava createCreateDrzava() {
+        return new CreateDrzava();
+    }
+
+    /**
+     * Create an instance of {@link ListIzdelek }
+     * 
+     */
+    public ListIzdelek createListIzdelek() {
+        return new ListIzdelek();
+    }
+
+    /**
+     * Create an instance of {@link Kategorija }
+     * 
+     */
+    public Kategorija createKategorija() {
+        return new Kategorija();
+    }
+
+    /**
+     * Create an instance of {@link ListKategorijaResponse }
+     * 
+     */
+    public ListKategorijaResponse createListKategorijaResponse() {
+        return new ListKategorijaResponse();
+    }
+
+    /**
+     * Create an instance of {@link ReadIzdelek }
+     * 
+     */
+    public ReadIzdelek createReadIzdelek() {
+        return new ReadIzdelek();
+    }
+
+    /**
+     * Create an instance of {@link CreateKategorijaResponse }
+     * 
+     */
+    public CreateKategorijaResponse createCreateKategorijaResponse() {
+        return new CreateKategorijaResponse();
+    }
+
+    /**
+     * Create an instance of {@link Proizvajalec }
+     * 
+     */
+    public Proizvajalec createProizvajalec() {
+        return new Proizvajalec();
+    }
+
+    /**
+     * Create an instance of {@link ReadProizvajalec }
+     * 
+     */
+    public ReadProizvajalec createReadProizvajalec() {
+        return new ReadProizvajalec();
+    }
+
+    /**
+     * Create an instance of {@link ReadUporabnikResponse }
+     * 
+     */
+    public ReadUporabnikResponse createReadUporabnikResponse() {
+        return new ReadUporabnikResponse();
     }
 
     /**
@@ -226,187 +458,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link DeleteUporabnikResponse }
-     * 
-     */
-    public DeleteUporabnikResponse createDeleteUporabnikResponse() {
-        return new DeleteUporabnikResponse();
-    }
-
-    /**
-     * Create an instance of {@link UpdateKategorijaResponse }
-     * 
-     */
-    public UpdateKategorijaResponse createUpdateKategorijaResponse() {
-        return new UpdateKategorijaResponse();
-    }
-
-    /**
-     * Create an instance of {@link Kategorije }
-     * 
-     */
-    public Kategorije createKategorije() {
-        return new Kategorije();
-    }
-
-    /**
-     * Create an instance of {@link ExistsUporabnik }
-     * 
-     */
-    public ExistsUporabnik createExistsUporabnik() {
-        return new ExistsUporabnik();
-    }
-
-    /**
-     * Create an instance of {@link UpdateUporabnikResponse }
-     * 
-     */
-    public UpdateUporabnikResponse createUpdateUporabnikResponse() {
-        return new UpdateUporabnikResponse();
-    }
-
-    /**
-     * Create an instance of {@link Drzava }
-     * 
-     */
-    public Drzava createDrzava() {
-        return new Drzava();
-    }
-
-    /**
-     * Create an instance of {@link Kategorija }
-     * 
-     */
-    public Kategorija createKategorija() {
-        return new Kategorija();
-    }
-
-    /**
-     * Create an instance of {@link DeleteIzdelekResponse }
-     * 
-     */
-    public DeleteIzdelekResponse createDeleteIzdelekResponse() {
-        return new DeleteIzdelekResponse();
-    }
-
-    /**
-     * Create an instance of {@link DeleteProizvajalec }
-     * 
-     */
-    public DeleteProizvajalec createDeleteProizvajalec() {
-        return new DeleteProizvajalec();
-    }
-
-    /**
-     * Create an instance of {@link CreateKategorijaResponse }
-     * 
-     */
-    public CreateKategorijaResponse createCreateKategorijaResponse() {
-        return new CreateKategorijaResponse();
-    }
-
-    /**
-     * Create an instance of {@link DeleteProizvajalecResponse }
-     * 
-     */
-    public DeleteProizvajalecResponse createDeleteProizvajalecResponse() {
-        return new DeleteProizvajalecResponse();
-    }
-
-    /**
      * Create an instance of {@link UpdateUporabnik }
      * 
      */
     public UpdateUporabnik createUpdateUporabnik() {
         return new UpdateUporabnik();
-    }
-
-    /**
-     * Create an instance of {@link Proizvajalci }
-     * 
-     */
-    public Proizvajalci createProizvajalci() {
-        return new Proizvajalci();
-    }
-
-    /**
-     * Create an instance of {@link DeleteDrzavaResponse }
-     * 
-     */
-    public DeleteDrzavaResponse createDeleteDrzavaResponse() {
-        return new DeleteDrzavaResponse();
-    }
-
-    /**
-     * Create an instance of {@link ReadDrzava }
-     * 
-     */
-    public ReadDrzava createReadDrzava() {
-        return new ReadDrzava();
-    }
-
-    /**
-     * Create an instance of {@link DeleteUporabnik }
-     * 
-     */
-    public DeleteUporabnik createDeleteUporabnik() {
-        return new DeleteUporabnik();
-    }
-
-    /**
-     * Create an instance of {@link ListIzdelek }
-     * 
-     */
-    public ListIzdelek createListIzdelek() {
-        return new ListIzdelek();
-    }
-
-    /**
-     * Create an instance of {@link LoginUporabnikResponse }
-     * 
-     */
-    public LoginUporabnikResponse createLoginUporabnikResponse() {
-        return new LoginUporabnikResponse();
-    }
-
-    /**
-     * Create an instance of {@link CreateIzdelek }
-     * 
-     */
-    public CreateIzdelek createCreateIzdelek() {
-        return new CreateIzdelek();
-    }
-
-    /**
-     * Create an instance of {@link ListDrzava }
-     * 
-     */
-    public ListDrzava createListDrzava() {
-        return new ListDrzava();
-    }
-
-    /**
-     * Create an instance of {@link UpdateProizvajalec }
-     * 
-     */
-    public UpdateProizvajalec createUpdateProizvajalec() {
-        return new UpdateProizvajalec();
-    }
-
-    /**
-     * Create an instance of {@link ListProizvajalec }
-     * 
-     */
-    public ListProizvajalec createListProizvajalec() {
-        return new ListProizvajalec();
-    }
-
-    /**
-     * Create an instance of {@link DeleteKategorija }
-     * 
-     */
-    public DeleteKategorija createDeleteKategorija() {
-        return new DeleteKategorija();
     }
 
     /**
@@ -418,35 +474,35 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Ocena }
+     * Create an instance of {@link Izdelek }
      * 
      */
-    public Ocena createOcena() {
-        return new Ocena();
+    public Izdelek createIzdelek() {
+        return new Izdelek();
     }
 
     /**
-     * Create an instance of {@link ReadIzdelek }
+     * Create an instance of {@link DeleteIzdelekResponse }
      * 
      */
-    public ReadIzdelek createReadIzdelek() {
-        return new ReadIzdelek();
+    public DeleteIzdelekResponse createDeleteIzdelekResponse() {
+        return new DeleteIzdelekResponse();
     }
 
     /**
-     * Create an instance of {@link ReadKategorija }
+     * Create an instance of {@link UpdateIzdelek }
      * 
      */
-    public ReadKategorija createReadKategorija() {
-        return new ReadKategorija();
+    public UpdateIzdelek createUpdateIzdelek() {
+        return new UpdateIzdelek();
     }
 
     /**
-     * Create an instance of {@link ListUporabnikResponse }
+     * Create an instance of {@link DeleteProizvajalec }
      * 
      */
-    public ListUporabnikResponse createListUporabnikResponse() {
-        return new ListUporabnikResponse();
+    public DeleteProizvajalec createDeleteProizvajalec() {
+        return new DeleteProizvajalec();
     }
 
     /**
@@ -458,22 +514,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CreateDrzavaResponse }
-     * 
-     */
-    public CreateDrzavaResponse createCreateDrzavaResponse() {
-        return new CreateDrzavaResponse();
-    }
-
-    /**
-     * Create an instance of {@link ListIzdelekResponse }
-     * 
-     */
-    public ListIzdelekResponse createListIzdelekResponse() {
-        return new ListIzdelekResponse();
-    }
-
-    /**
      * Create an instance of {@link ReadProizvajalecResponse }
      * 
      */
@@ -482,19 +522,35 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link UpdateDrzavaResponse }
+     * Create an instance of {@link ListUporabnikResponse }
      * 
      */
-    public UpdateDrzavaResponse createUpdateDrzavaResponse() {
-        return new UpdateDrzavaResponse();
+    public ListUporabnikResponse createListUporabnikResponse() {
+        return new ListUporabnikResponse();
     }
 
     /**
-     * Create an instance of {@link Izdelki }
+     * Create an instance of {@link Drzava }
      * 
      */
-    public Izdelki createIzdelki() {
-        return new Izdelki();
+    public Drzava createDrzava() {
+        return new Drzava();
+    }
+
+    /**
+     * Create an instance of {@link UpdateDrzava }
+     * 
+     */
+    public UpdateDrzava createUpdateDrzava() {
+        return new UpdateDrzava();
+    }
+
+    /**
+     * Create an instance of {@link ListKategorija }
+     * 
+     */
+    public ListKategorija createListKategorija() {
+        return new ListKategorija();
     }
 
     /**
@@ -506,67 +562,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CreateUporabnikResponse }
+     * Create an instance of {@link ReadIzdelekResponse }
      * 
      */
-    public CreateUporabnikResponse createCreateUporabnikResponse() {
-        return new CreateUporabnikResponse();
+    public ReadIzdelekResponse createReadIzdelekResponse() {
+        return new ReadIzdelekResponse();
     }
 
     /**
-     * Create an instance of {@link CreateProizvajalecResponse }
+     * Create an instance of {@link ReadKategorijaResponse }
      * 
      */
-    public CreateProizvajalecResponse createCreateProizvajalecResponse() {
-        return new CreateProizvajalecResponse();
+    public ReadKategorijaResponse createReadKategorijaResponse() {
+        return new ReadKategorijaResponse();
     }
 
     /**
-     * Create an instance of {@link ListDrzavaResponse }
+     * Create an instance of {@link LoginUporabnikResponse }
      * 
      */
-    public ListDrzavaResponse createListDrzavaResponse() {
-        return new ListDrzavaResponse();
-    }
-
-    /**
-     * Create an instance of {@link Proizvajalec }
-     * 
-     */
-    public Proizvajalec createProizvajalec() {
-        return new Proizvajalec();
-    }
-
-    /**
-     * Create an instance of {@link UpdateKategorija }
-     * 
-     */
-    public UpdateKategorija createUpdateKategorija() {
-        return new UpdateKategorija();
-    }
-
-    /**
-     * Create an instance of {@link CreateDrzava }
-     * 
-     */
-    public CreateDrzava createCreateDrzava() {
-        return new CreateDrzava();
-    }
-
-    /**
-     * Create an instance of {@link Uporabniki }
-     * 
-     */
-    public Uporabniki createUporabniki() {
-        return new Uporabniki();
-    }
-
-    /**
-     * Create an instance of {@link Drzave }
-     * 
-     */
-    public Drzave createDrzave() {
-        return new Drzave();
+    public LoginUporabnikResponse createLoginUporabnikResponse() {
+        return new LoginUporabnikResponse();
     }
 
 }

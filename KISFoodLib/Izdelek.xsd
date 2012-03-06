@@ -20,6 +20,9 @@
 			<xsd:element minOccurs="0" name="drzavaIzvora"
 				type="bons0:Drzava">
 			</xsd:element>
+			<xsd:element minOccurs="0" name="engName"
+				type="xsd:string">
+			</xsd:element>
 			<xsd:element minOccurs="0" name="ocene" type="bons0:Ocena"
 				maxOccurs="unbounded">
 			</xsd:element>

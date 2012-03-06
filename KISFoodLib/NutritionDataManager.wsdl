@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="NutritionDataManager" targetNamespace="http://KISFoodLib/NutritionDataManager" xmlns:tns="http://KISFoodLib/NutritionDataManager" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <wsdl:types>
+    <xsd:schema targetNamespace="http://KISFoodLib/NutritionDataManager">
+      <xsd:element name="getKalorije">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="engName" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getKalorijeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:double"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="getKalorijeRequestMsg">
+    <wsdl:part element="tns:getKalorije" name="getKalorijeParameters"/>
+  </wsdl:message>
+    <wsdl:message name="getKalorijeResponseMsg">
+    <wsdl:part element="tns:getKalorijeResponse" name="getKalorijeResult"/>
+  </wsdl:message>
+    <wsdl:portType name="NutritionDataManager">
+    <wsdl:operation name="getKalorije">
+      <wsdl:input message="tns:getKalorijeRequestMsg" name="getKalorijeRequest"/>
+      <wsdl:output message="tns:getKalorijeResponseMsg" name="getKalorijeResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -71,7 +71,21 @@
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
-    </xsd:schema>
+            <xsd:element name="getKalorije">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="engName" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="getKalorijeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:double"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+        </xsd:schema>
   </wsdl:types>
     <wsdl:message name="createIzdelekRequestMsg">
     <wsdl:part element="tns:createIzdelek" name="createIzdelekParameters"/>
@@ -103,6 +117,12 @@
     <wsdl:message name="listIzdelekResponseMsg">
     <wsdl:part element="tns:listIzdelekResponse" name="listIzdelekResult"/>
   </wsdl:message>
+    <wsdl:message name="getKalorijeRequestMsg">
+    <wsdl:part element="tns:getKalorije" name="getKalorijeParameters"/>
+  </wsdl:message>
+    <wsdl:message name="getKalorijeResponseMsg">
+    <wsdl:part element="tns:getKalorijeResponse" name="getKalorijeResult"/>
+  </wsdl:message>
     <wsdl:portType name="ManageIzdelek">
     <wsdl:operation name="createIzdelek">
       <wsdl:input message="tns:createIzdelekRequestMsg" name="createIzdelekRequest"/>
@@ -124,5 +144,9 @@
       <wsdl:input message="tns:listIzdelekRequestMsg" name="listIzdelekRequest"/>
       <wsdl:output message="tns:listIzdelekResponseMsg" name="listIzdelekResponse"/>
     </wsdl:operation>
-  </wsdl:portType>
+        <wsdl:operation name="getKalorije">
+      <wsdl:input message="tns:getKalorijeRequestMsg" name="getKalorijeRequest"/>
+      <wsdl:output message="tns:getKalorijeResponseMsg" name="getKalorijeResponse"/>
+    </wsdl:operation>
+    </wsdl:portType>
 </wsdl:definitions>

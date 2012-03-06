@@ -124,6 +124,14 @@
 							<div class="rating_small"><%=df.format(avgDrzave) %></div>
 						</td>
 					</tr>
+					<tr>
+						<td>
+							<div>
+								<p class="item_att">Angleško ime</p>
+								<p class="item_att_textfield"><input type="text" class="input_text" name="engName" value="<%=i.getEngName() %>"/></p>
+							</div>
+						</td>
+					</tr>
 				</table>
 			</div>
 			<div class="buttons">
