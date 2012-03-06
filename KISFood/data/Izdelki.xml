@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><izdelki xmlns="http://www.example.org/Proizvajalci">
-<izdelek id="1">
-<naziv>Špageti</naziv>
-<kategorija id="2"/>
-<proizvajalec id="1"/>
-<drzavaIzvora id="1"/>
-<engName>Spaghetti</engName>
-<ocene>
-<ocena idUser="0">4</ocena>
-</ocene>
-</izdelek>
+
 <izdelek id="2">
 <naziv>Ananas</naziv>
 <kategorija id="0"/>
@@ -17,8 +8,11 @@
 <engName>Pineapple</engName>
 
 
+
+
 <ocene>
-<ocena idUser="0">9</ocena>
+<ocena idUser="0">4</ocena>
+<ocena idUser="1">8</ocena>
 </ocene>
 </izdelek>
 <izdelek id="3">
